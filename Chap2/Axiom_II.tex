@@ -1,0 +1,114 @@
+\section{Axioms II: Reinforcement and Monotonicity Properties}
+
+In this part, we mainly discuss the second group of the axioms, which are about profile changes when adding more voters or changing several voters' ballots. Hence we need variable electorate context and voting situation: for $s,t:\; \linearor \to \mathbb{Z}^+$\footnote{$s,t$ can be regarded as two group of voters with different ballots.}. For simplicity, we fix the following conventions:
+\begin{itemize}
+    \item $s+t$ stands for putting $s$ and $t$ together in one voter-set;
+    \item $ks\;(k \in \mathbb{N})$ stands for replacing each individual voter of s with k “clones”.
+\end{itemize}
+
+\begin{definition}[Reinforcement (aka Consistency)]
+    An SCF $f$ is reinforcing if $f(s) \cap f(t) \neq \emptyset \Rightarrow f(s+t) = f(s) \cap f(t)$.
+\end{definition}
+
+Intuitively, reinforcement requires that the common winning alternatives chosen by two disjoint sets of voters (if there exists) be exactly those chosen by the union of these sets. Specially if $f(s) = f(t)$ then $f(s+t) = f(s) = f(t)$.
+
+There's also a weak form of reinforcement:
+\begin{definition}[Homogeneity]
+    $f(ks) = f(s)$ for all $k \in \N$.
+\end{definition}
+
+Noted that all scoring rules are reinforcing, since if some alternatives get the highest score both in $s$ and $t$, then they must have the highest score in $s+t$. Analogously we can apply the same argument to \textit{compound scoring rules}.
+
+\begin{definition}[Compound Scoring Rules]
+    A voting rule is a \textit{compound scoring rule} if any ties resulting from a first score vector $\mathbf{w}_1$ may be broken by score differences arising from a second such vector $\mathbf{w_2}$, with a possible third vector used to break ties that still remain, and so on; any finite number $j \geq 1$ of score vectors may be used.\\
+    A \textit{simple scoring rule} is the scoring rule which is not compound.
+\end{definition}
+
+Notice that on a domain that is restricted by fixing an upper bound on the number of voters, every such compound rule is equivalent to some simple scoring rule\footnote{Why??????Anyone can tell me why\dots?????????}.
+
+\begin{theorem}[See \textcite{John_compound} and \textcite{young_social_1975}]
+    The anonymous, neutral, and reinforcing SCFs are exactly the compound scoring rules.
+\end{theorem}
+
+\begin{proof}
+    886
+\end{proof}
+
+\begin{proposition}
+    All Condorcet extension SCFs for three or more alternatives violate reinforcement.
+\end{proposition}
+
+\begin{proof}
+    Consider voting situation $s$ and $t$ with 3 alternatives below:\\
+    ~\\
+    \begin{minipage}{0.5\textwidth}
+        \begin{center}
+            \begin{tabular}{ccc}
+                2 & 2 & 2\\
+                \hline
+                a & c & b\\
+                b & a & c\\
+                c & b & a
+            \end{tabular}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+            \begin{tabular}{cc}
+                2 & 1\\
+                \hline
+                b & a \\
+                a & b\\
+                c & c
+            \end{tabular}
+    \end{minipage}
+    \\
+    Let $f$ be any Condorcet extension. Since $b$ is the Condorcet winner in $t$, we have $f(t) = \{b\}$. Also $a$ is the Condorcet winner in $(s+t)$, thus $f(s+t) = \{a\}$. If $f$ is reinforcing then $a \in f(t)$ should hold, which leads to a contradiction.\\
+    If we assume $f$ to be Pareto, then it's easy to extend our construction to a general form, just by adding other alternatives $x_i$ behind $a,b,c$ in the voting situation. If not, we have to find another more complicated voting situation as a counterexample.
+\end{proof}
+
+\noindent Intuitively, for a winner $a$, if we move $a$ from under some alternatives to over them in some voters' preference, without changing the relative order of other pair of alternatives excluded $a$, then $a$ still should be the winner (\textit{simple lift}). That's what \textit{monotonicity} said.
+
+\begin{definition}
+    A resolute SCF $f$ satisfies \textit{monotonicity} (aka weak monotonicity) if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim'_i$ by lifting the winning alternative $x = f(\profile)$ simply, $f(\profile') = f(\profile)$.
+\end{definition}
+
+Notice that here we require that $f(\profile)$ is single-valued, if not, then the definition only cares about the cases when $|f(\profile)| = 1$.
+
+Suppose $f$ is a voting rule which select the alternative(s) with highest score, and lifting alternatives $x$ never lower $x$'s score or raise $y$'s score for $ y \neq x$. Then $f$ is always monotonic. It follows that all proper scoring rules are monotonic.
+However, each of scoring run-off rule is not monotonic\footnote{For scoring run-off rules, see the last part of \cref{run-off}.}. I omitted the proof here since it seems to do with some knowledge of computation\dots
+
+\begin{remark}
+    Every resolute SCF $f$ which violate monotonicity implies that there's an opportunity for voter $i$ manipulate $f$ by simple lifting or dropping an alternative:\\
+    Let $\succ_i \mapsto \succ'_i$ by a simple lift of he winning alternative $a$ which makes $b$ win and $a$ lose. If $b \succ_i a$, then the voter with sincere ballot $\succ_i$ would gain by casting the insincere ballot $\succ'_i$ and vice versa.
+\end{remark}
+
+Thus monotonicity is a weak form of strategyproofness. Below are some relavent definitions:
+
+\begin{definition}
+    A resolute SCF $f$ satisfies:
+    \begin{itemize}
+        \item \textit{Strategyproofness} if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim'_i$ , $f(\profile) \succsim_i f(\profile')$.
+        \item \textit{Maskin monotonicity} (aka \textit{strong monotonicity}) if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to a ballot $\succsim'_i$ satisfying for all $y,\; f(\profile) \succsim_i y \Rightarrow f(\profile) \succsim'_i y$ then $f(\profile') = f(\profile)$\footnote{See \textcite{maskin1999}. The original definition is based on not only resolute SCF: $f$ is Maskin monotonic if $\forall a \in f(\profile)$, if $\forall i \in N,\; \forall b \in A,\; a \succsim_i b \Rightarrow a \succsim'_i b$, then $a \in f(\profile')$. It can be understood as, if $a$ does not fall below any alternatives that it was not below before, then $a$ will still be the winner.}.
+        \item \textit{Down monotonicity} if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim'_i$ by dropping a losing alternative $b \neq f(\profile)$ simply, $f(\profile') = f(\profile)$.
+        \item \textit{One-way monotonicity} if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim'_i$, $f(\profile) \succsim_i f(\profile')$ or $f(\profile') \succsim_i f(\profile)$\footnote{See \textcite{sanver_one-way_2009}: It asserts that whenever one identification represents a successful manipulation, the other represents a failure.}
+        \item \textit{Half-way monotonicity} if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim^{rev}_i$, $f(\profile) \succsim_i f(\profile')$, where $\succsim^{rev}$ denotes the reverse of $\succsim$.
+        \item \textit{Participation} (the absence of no show paradoxes) if whenever a profile $\profile$ is modified to $\profile'$ by adding one voter $i$ with ballot $\succsim_i$ to the electorate, $f(\profile') \succsim_i f(\profile)$.
+    \end{itemize}
+\end{definition}
+
+Participation is a corresponding version of strategyproofness for no-show paradox. No-show paradox, first come up by \textcite{fishburn_paradoxes_1983}, also mentioned by \textcite{sanver_one-way_2009}, shows that, one additional participating voter shows up to cast her vote, and the winner is then an alternative that is strictly inferior (according to the preferences of the participating voter) to the alternative who would have won had she not shown up. Thus the paradox implies an opportunity to manipulate by abstaining.
+
+\begin{proposition}
+    For resolute SCFs:
+    \begin{enumerate}
+        \item Strategyproofness $\Rightarrow$ Maskin monotonicity $\Leftrightarrow$ Down monotonicity $\Rightarrow$ monotonicity
+        \item Strategyproofness $\Rightarrow$ One-way monotonicity $\Rightarrow$ Half-way monotonicity
+        \item Participation $\Rightarrow$ monotonicity
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    The proof of \textit{Item I} and \textit{Item II} is straightforward, except for the first arrow in Item I. Consider an SCF $f$ which violates Maskin monotonicity. Let $a, b \in A$, $\profile$ be a profile where $f(\profile) = \{a\}$ and for voter $i$, $b \succsim_i a$. Now $\profile'$ is modified from $\profile$ by changing $b \succsim_i a$ to $a \succsim_i b$, and $f(\profile') \neq \{a\}$. 
+    If $f(\profile') = \{b\}$ or any other alternatives $c$ with $c \succsim_i a$, then a voter with sincere preference $\succsim_i$ would gain a better result by casting the insincere ballot $\succsim'_i$. Otherwise a voter with sincere preference $\succsim'_i$ can change his ballot to $\succsim$. Thus $f$ is not strategyproofness.\\
+    For \textit{Item III}, see \textcite{sanver_one-way_2009}. 
+\end{proof}

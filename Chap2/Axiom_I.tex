@@ -1,0 +1,135 @@
+\section{Axioms I: Anonymity, Neutrality, and the Pareto Property}
+
+From now on, we switch to the \textit{axiomatic method} to identify voting rules. Axioms of SCFs can be loosely divided into three groups:
+\begin{itemize}
+    \item \textit{the First Group:} Axioms here represent the minimal demands, which has been seen as uncontroversial;
+    \item \textit{the Second Group (or Middling Strength):} They are satisfied by some interesting SCFs, but the cost is high, since it rules out many attractive voting rules;
+    \item \textit{the Third Group:} They are the strongest, including IIA and strategyproofness, in that they tend to rule out all reasonable voting rules.
+\end{itemize}
+
+In this section we mainly discuss five axioms from the first group. Let $f$ be an SCF.
+
+\begin{definition}
+    \begin{itemize}
+        \item \textbf{Anonymous:} $f$ is anonymous if each pair of voters plays interchangeable roles: $f(\profile) = f(\profile^\star)$ holds if for $i, j \in N$, $\succsim^\star_i = \succsim_j,\; \succsim^\star_j = \succsim_i$, and $\succsim^\star_k = \succsim_k$ for all $k \neq i,j$.
+        \item \textbf{Dictatorial:} $f$ is dictatorial if for some $i \in N$, $i$ act as dictator, i.e. for all profile $\profile$ and $a \in A$, if $a \succ_i b$ holds for all $b \in A$, then $f(\profile) = a$.
+        \item \textbf{Neutral: } $f$ is neutral if each pair of alternatives are interchangeable in the following sence: whenever a profile $\profile^\dagger$ is obtained from another $\profile$ by swapping the positions of the two alternatives $x$ and $y$ in every ballot, the outcome $f(\profile^\dagger)$ is obtained from $f(\profile)$ via a similar swap.
+        \item \textbf{Imposed:} $f$ is imposed if for no profile $\profile$ does $f(\profile) = \{x\}$.
+        \item Given a profile $\profile$ and $x,y \in A$, we say that $x$ \textit{Pareto dominates} $y$ if every voter ranks $x$ over $y$; and $y$ is called being Pareto dominated if such an $x$ exists.
+        \item \textbf{Pareto Principle:} $f$ is Pareto (Pareto optimal, or Paretian) if $f(\profile)$ never contains a Pareto dominated alternative.
+    \end{itemize}
+\end{definition}
+
+Noted that \textit{anonymity} and \textit{neutrality} are strong forms of equal treatment of voters, \textit{nondictatoriality} serves as a particularly weak version of anonymous, and \textit{nonimposition} serves as a particularly weak version of neutrality. We also have Pareto implies nonimposition.
+
+The voting rules mentioned above (Plurality, Copeland and Borda) are anonymous, neutral and Pareto, while reverse Borda\footnote{“Reverse Borda” SCF: elect the alternative(s) having the lowest Borda score.} is not Pareto. Although being uncontroversial, these three axioms do leads to unintended consequences, which is mentioned in \cite{moulin2014strategy}. 
+
+\begin{proposition}
+    \label{nonresolute}
+    Let $m \geq 2$ be the number of alternatives and $n$ be the number of voters. If $n$ is divisible by any integer $r$ with $1 < r \leq m$, then no neutral, anonymous and Pareto SCF is resolute (single-valued).
+\end{proposition}
+
+\begin{proof}
+    For $m \geq 3$ (with $A = \{a,b,c,x_1,\dots,x_{m-3}\}$) and $n = 3k$. Consider a profile $\profile$ as following.
+    \begin{center}
+        \begin{tabular}{ccc}
+            $k$ & $k$ & $k$\\
+            \hline
+            $a$ & $c$ & $b$\\
+            $b$ & $a$ & $c$\\
+            $c$ & $b$ & $a$\\
+            $x_1$ & $x_1$ & $x_1$\\
+            $\vdots$ & $\vdots$ & $\vdots$
+        \end{tabular}
+    \end{center}
+    We show that $f(\profile) = \{a,b,c\}$.
+    Since $f$ is Pareto, $f(\profile) \subseteq \{a,b,c\}$. W.l.o.g. $a \in f(\profile)$. First we swap the position of $a$ and $b$, then $b$ and $c$, finally we'll get a profile $\profile'$ which remains the same as $\profile$. Thus we have $c \in f(\profile)$ since $f$ is neutral. Analogously we can prove that $b \in f(\profile)$. \\
+    Using the same method we can extend the conclusion above to the case in \cref{nonresolute}.
+\end{proof}
+
+\cref{nonresolute} tell us that we have to deal with ties in the outcome. In \cite{brandt_handbook_2016} he come up with four method trying to solve the problem:
+
+\begin{enumerate}
+    \item Use a fixed ordering of the alternatives (or a designated voter) to break all ties.
+    \item Use a randomized mechanism to break all ties.
+    \item Deal with set-valued outcomes directly.
+    \item Ignore or suppress the issue (assume no ties exist).
+\end{enumerate}
+
+\section{Voting Rules I: Condorcet Extensions, Scoring Rules, and Run-Offs}
+
+Introduce two axioms here:\\
+
+\begin{definition}
+    \begin{itemize}
+        \item \textit{monotonicity}: if $x$ is the winner and one voter switches his ballot from $y$ to $x$, then $x$ is still a winner; 
+        \item \textit{positive responsiveness}: if $x$ is a winner and one voter switches her ballot from $y$ to $x$, then $x$ becomes the unique winner.
+    \end{itemize}
+\end{definition}
+
+Now we concentrate on the \textit{Majority rule}, which suits for the case when the number of alternatives is $2$. Majority rule, which selects the alternative with more votes as winner, is anonymous, neutral and resolute when the number of voters is odd. In additional, the characterizition of it requires \textit{monotonicity} or \textit{positive responsiveness}.
+
+\begin{proposition}[May's Theorem]
+    \label{ThMay}
+    For two alternatives and an odd number of voters, majority rule is the unique resolute, anonymous, neutral, and monotonic SCF. For two alternatives and any number of voters, it is the unique anonymous, neutral, and positively responsive SCF.
+\end{proposition}
+
+\begin{proof}
+    Obviously majority rule satisfies these properties. For uniqueness, consider any other rules that selects the alternative with fewer votes as the winner. Let $A = \{a,b\}$ and $N = \{1,\dots,n\}$ with $n$ being odd. W.l.o.g. $|\{i \in N\;|\; a \succ_i b\}| = k_1$ and $|\{j \in N\;|\; b \succ_j a\}| = k_2$ where $k_1 + k_2 = n$ and $k_1 < k_2$. According to the rule, $a$ is the winner. Then we switch enough ballots to form a new profile where $|\{i \in N\;|\; a \succ_i b\}| = k_2$ and $|\{j \in N\;|\; b \succ_j a\}| = k_1$. $b$ will be the winner by neutrality, while monotonicity implies $a$ is still the winner, from which we get a contradiction. Analogously we can prove the other case.
+\end{proof}
+
+\cref{ThMay} tells us that majority rule is the best voting rule when $|A| = 2$. Since all other SCFs considered so far can be reduced to majority rule in the case of two alternatives, we can also say that these SCFs can be seen as "majority rule for 3 of more alternatives". But for SCFs with a full domain ($\mathrm{Dom}(f) = \linearor^{<\infty}$), there is no complitely satisfactory extension of May's Theorem to the case of $|A| \geq 3$.
+
+There's another rule which is considered deserving:
+
+\begin{definition}[Condorcet winner]
+    A \textit{Condorcet winner} for a profile $\profile$ is an alternative $x$ that defeats every other alternative in the strict pairwise majority sense: $x >^\mu_\profile y$ for all $y \neq x$\footnote{The weak version is $x \geq^\mu_\profile y$ for all $y \neq x$}.\\
+    \textit{Pairwise Majority Rule (PMR)} declares the winning alternative to be the Condorcet winner, and is undefined when a profile has no Condorcet winner.
+\end{definition}
+
+Whenever a Condorcet winner exists, it must be unique. But with $|A| \geq 3$, it might forms \textit{majority cycles} which rule them out, then no PMR winner exists. The majority cycle is known as \textit{Condorcet's voting paradox}, which reminds us that $>^\mu$ is intranstive.
+
+Notice that PMR is an SCF with \textit{restricted domain}, since it has the possibility that no winner exists. Our interest here is with full SCFs that agree with PMR on its domain:
+
+\begin{definition}
+    \begin{itemize}
+        \item \textit{Condorcet domain:} $\condom = \{\profile\;|\; \profile \mbox{ has a Condorcet winner}\}$;
+        \item An SCF $f$ is \textit{Condorcet extension (consistent):} if for all $\profile \in \condom$, $f$ selects the Condorcet winner alone.
+    \end{itemize}
+\end{definition}
+
+\begin{proposition}[Campbell-Kelly Theorem]
+    \label{ThCK}
+    Consider SCFs with domain $\condom$ for three or more alternatives. Pairwise Majority Rule is resolute, anonymous, neutral, and strategyproof; for an odd number of voters, it is the unique such rule.
+\end{proposition}
+
+If we restrict $f$'s domain to $\condom$, then \cref{ThCK} can be seen as “May's Theorem for three or more alternatives”, specially for strategyproof, when $|A| = 2$ it can be shown that monotonicity is equivalent to strategyproof.
+
+\begin{proof}
+    Clearly, restricted to $\condom$, PMR is resolute, anonymous and neutral. For strategyproof, conside a voter $i$ with the sincere ballot being $y \succ_i x$ for alternatives $x,y$, and the Condorcet winner is $x$. Then however $i$ changes his ballot, $x$ remains to be the winner.\\
+    For uniqueness\dots
+\end{proof}
+
+Note that Condorcet extension isn't necessary when choosing a voting rule. Borda is not a Condorcet extension actually, consider a profile $\profile$ with $|N| = 5$ and $A = \{a,b,c\}$, if three voters rank $a \succ b \succ c$ and two rank $b \succ c \succ a$\dots. And Copeland rule is a Condorcet extension.
+
+Condorcet extensions form the first class of voting rules. The second class is \textit{scoring rules}:
+
+\begin{definition}
+    \begin{itemize}
+        \item A \textit{score vector} $\mathbf{w} = (w_1,w_2,\dots,w_m)$ consists of real number \textit{scoring weights}. 
+        \item $\mathbf{w}$ is \textit{proper} if $w_1 \geq w_2 \geq \dots \geq w_m$ and $w_1 > w_m$.
+        \item A \textit{proper scoring rule} is one induced by a proper score vector, in which each voter awards $w_1$ points to their top-ranked alternative, $w_2$ points to their second-ranked, and so on. All points awarded to a given alternative are summed, and the winner is the alternative(s) with greatest sum.
+    \end{itemize}
+\end{definition}
+
+\label{run-off}
+The third class consists \textit{multiround rules}, which is based on the idea that less popular alternatives in one round be dropped from all ballots in the next round (with each ballot then ranking the remaining alternatives in the same relative order that they had in the initial version of that ballot); these rounds continue until some surviving alternative achieves majority support (or until only one is left standing).
+
+\section{An Informational Basis for Voting Rules: Fishburn's Classification}
+
+Fishburn divided SCFs into three classes according to the information required in them:
+\begin{itemize}
+    \item \textit{C1 functions}: SCFs which need only the information from the tournament;
+    \item \textit{C2 functions}: SCFs which need the additional information in the weighted tournament;
+    \item \textit{C3 functions}: SCFs which are neither C1 nor C2, plurality for example.
+\end{itemize}

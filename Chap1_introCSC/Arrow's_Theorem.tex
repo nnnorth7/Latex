@@ -1,0 +1,157 @@
+\chapter{Arrow's Theorem}
+
+\section{Basic Definition}
+
+I combined the book with Eric's handout about Arrow's Theorem, which can be found on his website \parencite{pacuit_socialchoice_2022}.\\
+~\\
+We fix the following conventions:
+\begin{itemize}
+    \item $\weakor$ the set of all \textit{weak orders} $\succsim$ on $A$, i.e. the set of all binary relations on $A$ that are complete and transitive;
+    \item $\linearor$ the set of all \textit{linear orders} $\succsim$ on $A$, which in addition are antisymmetric;
+    \item $\succ$ the strict part of $\succsim$.
+\end{itemize}
+
+From finite sets of \textit{individuals} (or \textit{voters}, or \textit{agents}) and alternatives (or \textit{candidates}), respectively. Then we can get a \textit{profile}, from which we can construct a function assigning the profile to a \textit{social preference order}.
+
+\begin{definition}[Profile]
+    Let $N = \{1, \dots, n\}$ be a finite set of individuals, and $A$ be a finite set of alternatives. A \textit{profile} $\mathbf{P} = \linearor^n$, or to say, a function assigning to each $i \in N$ a linear order on $A$.
+\end{definition}
+
+For $a,b \in A$, let:
+\begin{itemize}
+    \item $\mathbf{P}(a,b) = \{i \in N\ |\ a \succ_i b\}$;
+    \item $\mathbf{P}_{\upharpoonright\{a,b\}} = $ the function assigning to each $i \in N$ the relation $\succ_i \cap \;\{a,b\}^2$.
+\end{itemize}
+
+\begin{definition}[Social Welfare Function(SWF)]
+    A \textit{social welfare function} (SWF) is a function $f: \; \mathbf{P} \to \weakor$. 
+\end{definition}
+
+We call the out come $\weakor$ as social preference order, and we write $\succsim$ for $f(\succsim_1,\dots, \succsim_n)$. Noted that here we allow ties in social preference order, but not in the individual preferences.\\
+~\\
+Then we introduce some properties about SWF, where the first two is considered reasonable by lots of people, while the last is not.
+
+\begin{itemize}
+    \item \textit{weakly Paretian:} For all $a,b \in A$, if $\mathbf{P}(a,b) = N$, i.e. $a \succ_i b$ for all $i \in N$, then $a \succ b$;
+    \item \textit{independent of irrelevant alternatives (IIA):} For all $\mathbf{P},\mathbf{P'} \in \mathrm{Dom}(f)$ and $a ,b \in A$, if $\mathbf{P}_{\upharpoonright\{a,b\}} = \mathbf{P'}_{\upharpoonright\{a,b\}}$, then $a \succ b$ iff $a \succ' b$;
+    \item \textit{dictatorship:} There is an $i^\star \in N$ s.t. for all $a,b \in A$, if $a \succ_{i^\star} b$, then $a \succ b$.
+\end{itemize}
+~\\
+We hope that our SWF is both weakly Paretian and IIA, but not be a dictatorship. There shouldn't be a dictator in our voter-group. However, Arrow's Theorem just tell us that is impossible.
+
+\begin{theorem}[Arrow's Theorem]
+    When there are three or more alternatives, then every SWF that is weakly Paretian and IIA must be a dictatorship.
+\end{theorem}
+
+\section{Proof of Arrow's Theorem}
+
+Here we first introduce the concept of \textit{decisive coalition}.
+
+\begin{definition}
+    A coalition $C \subseteq N$ of individuals is called a \textit{decisive coalition} for alternative $a$ versus alternative $b$, if for all $\mathbf{P} \in \mathrm{Dom}(f)$, $C \subseteq \mathbf{P}(a,b)$ implies $a \succ b$.
+\end{definition}
+
+We call $C$ \textit{weakly decisive} for $a$ vs. $b$, if at least $C = P(a,b)$ implies $a \succ b$. \\
+\indent Notice that an SWF is weakly Paretian is the same as to say that the grand coalition $N$ is decisive, and $f$ is dictatorial is the same as to say that there exists a singleton that is decisive.\\
+~\\
+\textit{Sketch of proof:} Suppose that $|A| \geq 3$ and let $f$ be any SWF that is weakly Paretian and IIA. Since $f$ is weakly Paretian, the individual-set $N$ is a decisive coalition. First we show that for all weakly decisive coalition for $a$ vs.$\, b$, it's also decisive for all pairs of alternatives. Thus $N$ is decisive for all pairs. Then we split $N$ into two nonempty subsets again and again, until we obtain a coalition which is a singleton. We show that every time we split a decisive coalition up, one of the subsets remains decisive. Thus the final singleton we got from spliting $N$ up is decisive, say, a dictator.
+
+\begin{lemma}[Contagion (or Field Expansion)]
+    \label{Contagion}
+    If $C$ is weakly decisive for $a$ vs. $b$, then $C$ is decisive for all pairs of alternatives.
+\end{lemma}
+
+\begin{proof}
+    Let $\mathbf{P} \in \mathrm{Dom}(f)$ and $C$ is a coalition s.t. $C \subseteq \mathbf{P}(a',b')$ for arbitrary alternatives $a',b'$ and $C$ is weakly decisive for $a$ vs.$\, b$. Our goal is to show that $C$ is decisive for $a' \mbox{ vs.}\,b'$.\\
+    W.L.O.G. let $a,b,a',b'$ be mutually distinct (the other cases are similar). Consider a special profile $\mathbf{P'}$ s.t. $\mathbf{P'}_{\upharpoonright\{a',b'\}} = \mathbf{P}_{\upharpoonright\{a',b'\}}$, $a' \succ_i a \succ_i b \succ_i b'$ for all $i \in C$, $a' \succ_j a ,\  b \succ_j b'$ and $b \succ_j a$ for all $j \in N \backslash C$.\\
+    Since $C$ is weakly decisive for $a \mbox{ vs.}\, b$ and $C = \mathbf{P'}(a,b)$, we have $a \succ_\mathbf{P'} b$. Since $\mathbf{P'}(a',a) = \mathbf{P'}(b,b') = N$, from $f$ being weakly Paretian, $a' \succ_\mathbf{P'} a$ and $b \succ_\mathbf{P'} b'$. Since $\weakor$ is transitive, we have $a' \succ_\mathbf{P'} a \succ_\mathbf{P'} b \succ_\mathbf{P'} b'$.\\
+    Since $f$ is IIA and $\mathbf{P'}_{\upharpoonright\{a',b'\}} = \mathbf{P}_{\upharpoonright\{a',b'\}}$, we have $a' \succ b'$. Thus $C$ is decisive for $a' \mbox{ vs.}\, b'$.
+\end{proof}
+
+\begin{lemma}[Splitting (or Group Contraction)]
+    \label{Splitting}
+    For any $C \subseteq N$ with $|C| \geq 2$ that is decisive, there is nonempty sets $C_1, C_2 \subseteq C$ with $C_1 \cup C_2 = C$ and $C_1 \cap C_2 = \emptyset$ s.t. one of $C_1 \mbox{ and }C_2$ is decisive for all pairs as well.
+\end{lemma}
+
+\begin{proof}
+    Recall that $|A| \geq 3$. Let $C$ be a decisive coalition s.t. $|C| \geq 2$. Consider a profile $\mathbf{P}$ in which everyone ranks alternatives $a,b,c$ in the top three positions. Furthermore, $a \succ_i b \succ_i c$ for all $i \in C_1$, $b \succ_j c \succ_j a$ for all $j \in C_2$ and $c \succ_k a \succ_k b$ for all $k \in N \backslash C$, where $C = C_1 \cup C_2$.\\
+    As $C$ is decisive, we have $b \succ c$. By the completeness of $\weakor$, either $a \succ c$ or $c \succsim a$. \\
+    We conseder two cases.
+    \begin{itemize}
+        \item[\textit{Case 1:}] $a \succ c$: $\mathbf{P}(a,c) = C_1$. Since $f$ is IIA, for any profile $\mathbf{P'} \in \mathrm{Dom}(f)$ s.t. $\mathbf{P'}_{\upharpoonright\{a,c\}} = \mathbf{P}_{\upharpoonright\{a,c\}}$, we have $C = \mathbf{P'}(a,c)$ implies $a \succ_\mathbf{P'} c$. Thus $C$ is weakly decisive for $a \mbox{ vs.} \, b$. By \cref{Contagion}, $C$ is decisive for all pairs.
+        \item[\textit{Case 2:}] $c \succsim a$: By transitivity of $\weakor$, $b \succ a$. With $\mathbf{P}(b,a) = C_2$, analogously we can conclude that $C_2$ is weakly decisive for $b \mbox{ vs.} \, a$, thus decisive for all pairs.
+    \end{itemize}
+\end{proof}
+
+\section{Another Version of Proof}
+
+In this part, I will give another version of Arrow's Theorem, which is mentioned by Eric Pacuit. The main difference between the two versions is the part after \cref{Contagion}.
+
+By \cref{Contagion}, let $\mathcal{D} = \{C \ |\ C \mbox{ is decisive }\}$. Then
+\begin{itemize}
+    \item $\mathcal{D} \neq \emptyset$, since $N \in \mathcal{D}$;
+    \item Since $N$ is finite, there is a minimal $C \in \mathcal{D}$, i.e. there is no $C' \in \mathcal{D}$ s.t. $C' \subsetneq C$.(?)
+\end{itemize}
+
+Now we prove the following:
+\begin{lemma}
+    \label{minimal}
+    Let $f$ be an SWF and $\mathcal{D} =\{C\ |\ C \mbox{ is decisive }\}$. If $C,C' \in \mathcal{D}$ are minimal, then $C = C'$.
+\end{lemma}
+
+\begin{proof}
+    Let $\mathcal{D}$ be the set of all decisive coalition for SWF $f$ with $C,C' \in \mathcal{D}$ where $C,C'$ are minimal. \\
+    Suppose (towards a contradiction) that $C \neq C'$. We show (i) $C \cap C' \neq \emptyset$; (ii) $C \cap C'$ is decisive. Denoted $C \cap C'$ as $A$.
+    \begin{enumerate}
+        \item[(i)] Suppose (towards a contradiction) that $C \cap C' = \emptyset$. Let $\mathbf{P}$ be a profile s.t. $C \subseteq \mathbf{P}(a,b)$ and $C' \subseteq \mathbf{P}(b,a)$. Since both $C$ and $C'$ is decisive, $a \succ b$ and $b \succ a$, contradict.
+        \item[(ii)] Let $c \neq a$ and $c \neq b$. Suppose $\mathbf{P}$ is a profile where $A \subseteq \mathbf{P}(c,b)$. Consider another profile $\mathbf{P'}$ with $\mathbf{P'}_{\upharpoonright\{c,b\}} = \mathbf{P}_{\upharpoonright\{c,b\}}$ and the ranking of $a,b,c$ is as follows:
+        \begin{itemize}
+            \item $c \succ'_i a$ and $b \succ'_i a$ for all $i \in C \backslash A$;
+            \item $a \succ'_j c$ and $a \succ'_j b$ for all $j \in C'\backslash A$;
+            \item $c \succ'_k a \succ'_k b$ for all $k \in A$.
+        \end{itemize}
+        Due to $A,A'$ being decisive, we have $c \succ' a$ and $a \succ' b$, by transitivity, $c \succ' b$. Then we have $c \succ b$, since $\mathbf{P'}_{\upharpoonright\{c,b\}} = \mathbf{P}_{\upharpoonright\{c,b\}}$ and $f$ is IIA. Thus $A$ is decisive for $c \mbox{ vs.}\' b$, say, $A$ is decisive for all pairs.
+    \end{enumerate}
+    Then $A \in \mathcal{D}$ as well, and $A \subseteq C,C'$ contradict with the assumption that $C,C'$ are minimal.\\
+    Thus $C = C'$, $\mathcal{D}$ has a unique minimal element.
+\end{proof}
+
+\begin{lemma}
+    Let $C^\ast$ be the unique minimal element of $\mathcal{D}$ and $a,b \in A$. For all $i \in C^\ast$ and profile $\mathbf{P} \in \mathrm{Dom}(f)$, if $a \succ_i b$, then not $b \succ a$.
+\end{lemma}
+
+\begin{proof}
+    Suppose (towards a contradiction) that there is a $i \in C^\ast$ and $\mathbf{P} \in \mathrm{Dom}(f)$ s.t. $a \succ_i b$ and $b \succ a$.\\
+    Since $C^\ast$ is decisive, there must be some $C' \subsetneq C^\ast$ s.t. $C' \neq \emptyset$, $i \not \in C'$ and $b \succsim_j a$ for all $j \in C'$. W.l.o.g. let $C' = C^\ast \backslash \{i\}$. Now we show that $C'$ is decisive for $c \mbox{ vs.}\, a$, then $C' \in \mathcal{D}$, contradict with $C^\ast$ is the minimal element by \cref{minimal}.\\
+    To show that $C'$ is decisive for $c \mbox{ vs.}\, a$, let $\mathbf{P''} \in \mathrm{Dom}(f)$ be an arbitrary profile with $C' \subseteq \profile''(c,a)$. Consider a profile $\mathbf{P'} \in \mathrm{Dom}(f)$ s.t. $\profile'_{\upharpoonright \{a,b\}} = \profile_{\upharpoonright \{a,b\}}$ and $\profile''_{\upharpoonright \{a,c\}} = \profile'_{\upharpoonright \{a,c\}}$. Furthermore, the remaining rankings of $a,b,c$ is:
+    \begin{itemize}
+        \item $a \succ_i b$ and $c \succ_i b$ for $i$;
+        \item $c \succ_j a$ and $c \succ_j b$ for all $j \in C'$.
+    \end{itemize}
+    Since $C^\ast = C' \cup \{i\}$ is decisive and $C^\ast \subseteq \profile'(c,b)$, $c \succ' b$ holds. Moreover, from $\profile'_{\upharpoonright \{a,b\}} = \profile_{\upharpoonright \{a,b\}}$ and $b \succ a$, we can conclude that $b \succ' a$ by IIA. Thus $c \succ' a$.\\
+    Since $\profile''_{\upharpoonright \{a,c\}} = \profile'_{\upharpoonright \{a,c\}}$, by IIA, $c \succ'' a$. Thus $C'$ is decisive.
+\end{proof}
+
+\begin{definition}[Oligarchy]
+    Suppose that $f$ is an SWF. A set $M \subseteq N$ is an \textit{oligarchy} for $f$ if $M$ is decisive and, for all $\profile \in \mathrm{Dom}(f)$, if $a \succ_i b$ for some $i \in M$, then not $b \succ a$.
+\end{definition}
+~\\
+
+\begin{theorem}[Gibbard's Oligarchy Theorem]
+    \label{oligarchy}
+    Assume that $|A| \geq 3$ and $N$ is finite. Then any SWF $f$ satisfying weakly Paretian and IIA has an oligarchy.
+\end{theorem}
+
+\cref{oligarchy} is easy to be found. Since $\mathcal{D} \neq \emptyset$, there is a unique minimal element in $\mathcal{D}$, which is the oligarchy. \\
+~\\
+Now we prove Arrow's Theorem.
+
+\begin{lemma}
+    Assume that $|A| \geq 3$ and $N$ is finite. Let $f$ be an SWF satisfying weakly Paretian and IIA has an oligarchy. Then, if $C$ is an oligarchy of $f$, then $|C| = 1$, say, $f$ is a dictatorship. 
+\end{lemma}
+
+\begin{proof}
+    Suppose (towards a contradiction) that $|C| > 1$. Then we can make a partition of $C$, i.e. $C = C_1 \cup C_2$ and $C_1 \cap C_2 = \emptyset$ where $C_1,C_2$ is nonempty set.\\
+    Consider a profile $\profile$ in which $a \succ_i b \succ_i c$ for all $i \in C_1$ and $b \succ_j c \succ_j a$ for all $j \in C_2$. Then not $b \succ a$ and not $a \succ c$, which is $a \succsim b$ and $c \succsim a$. By transitivity, $c \succsim b$. However, $C$ is decisive and $C \subseteq \profile(b,c)$, which leads us to the conclusion that $b \succ c$, contradict.\\
+    Thus $|C| = 1$, $f$ is a dictatorship.
+\end{proof}

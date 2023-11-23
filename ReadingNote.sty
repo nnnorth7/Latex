@@ -1,0 +1,98 @@
+\ProvidesPackage{ReadingNote}
+
+
+% Geometry of the text
+\usepackage[left=1cm, right=1cm, marginpar=0pt, marginparsep=0pt]{geometry} % adjust the margin to a comfortable value
+\usepackage[dvipsnames]{xcolor}
+
+% Set up theorem-like environments
+\usepackage[thmmarks, framed]{ntheorem}
+\usepackage[ntheorem,framemethod=TikZ]{mdframed}
+\newmdenv[linecolor=black]{framed}
+\mdfdefinestyle{theoremstyle}{%style for theorem env.
+innerleftmargin=13pt, frametitlerule=true,  linecolor=red!80,linewidth=0.5pt, frametitlebackgroundcolor=red!10, backgroundcolor=Apricot!3, 
+frametitlerulewidth=0.5pt, roundcorner=3pt, frametitleaboveskip=0pt, frametitlebelowskip=0pt, theoremseparator={\ $\blacktriangleright $}
+}
+\mdfdefinestyle{defstyle}{%style for definition env.
+innerleftmargin=13pt, frametitlerule=true,  linecolor=ForestGreen!80,linewidth=0.5pt, frametitlebackgroundcolor=ForestGreen!10, backgroundcolor=SpringGreen!3, 
+frametitlerulewidth=0.5pt, roundcorner=3pt, frametitleaboveskip=0pt, frametitlebelowskip=0pt, theoremseparator={\ $\blacktriangleright $}
+}
+\mdfdefinestyle{corstyle}{%style for corollary env.
+innerleftmargin=13pt, frametitlerule=true,  linecolor=Thistle!80,linewidth=0.5pt, frametitlebackgroundcolor=Thistle!20, backgroundcolor=Melon!3, 
+frametitlerulewidth=0.5pt, roundcorner=3pt, frametitleaboveskip=0pt, frametitlebelowskip=0pt, theoremseparator={\ $\blacktriangleright $}
+}
+\mdfdefinestyle{propstyle}{%style for theorem env.
+innerleftmargin=13pt, frametitlerule=true,  linecolor=YellowOrange!80,linewidth=0.5pt, frametitlebackgroundcolor=Dandelion!10, backgroundcolor=Goldenrod!3, 
+frametitlerulewidth=0.5pt, roundcorner=3pt, frametitleaboveskip=0pt, frametitlebelowskip=0pt, theoremseparator={\ $\blacktriangleright $}
+}
+\usepackage{authblk}
+
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\upshape}
+\theoremseparator{\ \textcolor{Maroon}{$\triangleright$}}
+\theorempostwork{}
+\newtheorem{remark}{\textcolor{Maroon}{Remark}}
+
+
+\theoremstyle{plain}
+\theorembodyfont{\itshape}
+\theoremseparator{}
+\newtheorem{fact}{Fact}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+
+\theoremstyle{plain}
+\theoremseparator{ }
+\theoremframepostskip{\topskip}
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\upshape}
+\mdtheorem[style=theoremstyle]{theorem}{Theorem}[chapter]
+\mdtheorem[style=defstyle]{definition}{Definition}[chapter]
+\mdtheorem[style=corstyle]{corollary}{Corollary}[theorem]
+\mdtheorem[style=corstyle]{lemma}{Lemma}[theorem]
+\mdtheorem[style=propstyle]{proposition}{Proposition}[chapter]
+
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\itshape\bfseries}
+\theorembodyfont{\normalfont}
+\theoremseparator{\ \textcolor{RoyalBlue}{$\triangleright$}}
+\theoremsymbol{}
+\newtheorem{proof-wo}{Proof}
+\theoremsymbol{\ensuremath{\textcolor{RoyalBlue}{\boxtimes}}}
+\newtheorem{proof}{\textcolor{RoyalBlue}{Proof}}
+
+%%%%format
+% \setlength{\parindent}{0em}
+% \setlength{\parskip}{0.5em}
+\renewcommand{\baselinestretch}{1.25} 
+
+% More packages
+%%%% Diagrams
+\usepackage{pgffor}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%%%% Symbols and Fonts
+\usepackage{amsfonts, amssymb, amsmath, stmaryrd}
+% \usepackage{newtxtext, newtxmath}
+% \usepackage{MnSymbol}
+\usepackage{newpxtext, newpxmath}
+\usepackage{diagbox}
+\usepackage[mdyyyy]{datetime}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, allcolors=black}
+\usepackage[capitalise]{cleveref}
+\usepackage{footmisc}
+
+\usepackage{tcolorbox} % solution boxes
+\tcbuselibrary{breakable,skins}
+
+%%%% Aux
+\usepackage{setspace, fullpage, graphicx, url, verbatim, environ,
+  booktabs, needspace}
+%% List environments
+
+\newtcolorbox{soln}[1]{
+title = \textbf{#1}, colframe=blue!70, colback=CornflowerBlue!3, colbacktitle=blue!10, coltitle=black, boxrule=0.5pt, rightrule=0.5pt, bottomrule=0.5pt, breakable, enhanced jigsaw
+}

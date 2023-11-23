@@ -1,0 +1,166 @@
+\chapter{Introduction to the Theory of Voting}
+
+%%% section1
+\section{Introduction}
+
+In this chapter we mainly concentrate on \textit{multicandidate} voting with \textit{ranked} ballots, i.e. each voter submits a linear ordering of the alternatives, and single winners (or several winners, in the event of a tie) as outcomes. A voting rule in this setting is called a social choice function or $SCF$.\\
+
+\noindent Here we introduce three most prominent results in multicandidate voting: 
+\begin{itemize}
+    \item \textbf{Majority cycles:} Collective peference may have a cycle, i.e. a majority of voters prefer some alternative a to b, a (different) majority prefers b to c, and a third majority prefers c to a;
+    \item \textbf{Arrow's Theorem}: Every voting rule for three or more alternatives either violates IIA or is a dictatorship,in which the election outcome depends solely on the ballot of one designated voter;
+    \item \textbf{Gibbard-Satterthwaite Theorem (GST)}: Every SCF $f$ other than a dictatorship fails to be strategyproof, i.e. $f$ sometimes provides an incentive for an individual voter i to manipulate the outcome, that is, to misrepresent his or her true preferences over the alternatives by casting an insincere ballot.\\
+    In this case, the voter prefers the alternative that wins when she casts some insincere ballot to the winner that would result from a sincere one. A limitation of GST is that it presumes every election to have a unique winner, which might be problematic. Duggan-Schwartz Theorem provides a solution to it.
+\end{itemize}
+
+%%% section2
+\section{Social Choice Functions: Plurality, Copeland, and Borda}
+
+A multicandidate voting with ranked ballots is as follows:
+\begin{itemize}
+    \item $N = \{1,2, \dots, n\}$ is a finite set of voters.
+    \item $A = \{1,2, \dots, m\}$ is a finite set of alternatives, with $m \geq 2$.
+    \item A linear ordering $\succsim_i$ of $A$ stands for the ballot cast by voter $i$: $\succsim_i$ is transitive, complete and antisymmetric; $x \succ y$ is a shortwrite for $x \succsim y$ holds and $y \succsim x$ fails.
+    \item $\linearor$ denotes the set of all linear orderings for $A$.
+    \item A profile $\profile = (\succsim_1,\succsim_2,\dots,\succsim_n) \in \linearor^n $ is a collection of each voter's ballot.
+    \item $\linearor^{<\infty}$ stands for $\bigcup_{n \in \N} \linearor^n$
+\end{itemize}
+
+Notice that $\linearor$ is actually a \textit{strict} ordering, no voter may express indifference to two alternatives. The ballots mentioned above are called \textit{preference rankings} since $x \succ_i y$ means voter $i$'s (strict) preference for alternative $x$ over alternative $y$.\\
+Alternatively we might allow \textit{weak} preference rankings (\textit{pre-linear} orderings) as ballots. Thus let $R$ denote a profile of weak preference rankings and similarly to $\linearor$:
+\begin{itemize}
+    \item $\weakor$ denotes the set of all pre-linear orderings for $A$.
+    \item $\weakor^n$ is the set of all profiles of weak rankings for a given $A$ and $n$.
+\end{itemize}
+
+In practice, we often use tabular to present a profile. For example, consider $\profile_1$ as following:
+\begin{center}
+    \begin{tabular}{cccc}
+        102 & 101 & 100 & 1\\
+        \hline
+        $a$ & $b$ & $c$ & $c$\\
+        $b$ & $c$ & $a$ & $b$\\
+        $c$ & $a$ & $b$ & $a$
+    \end{tabular}
+\end{center}
+
+$\profile_1$ is not a profile, but a \textit{voting situation}, i.e. a function $s:\ \linearor \to \N$. But mane voting rules are blind to the distinction between “profile” and “voting situation”, so we use the terms interchangeably.\\
+~\\
+Next we introduce some basic voting rules.
+
+\subsection{Plurality}
+
+A \textit{plurality ballot} names a single, most-preferred alternative, the \textit{plurality voting} rule selects the alternative(s) with a plurality (greatest number) of votes as the winner(s). \\
+Under plurality voting, we only pay attention to the top-ranked alternatives and ignore the rest of the ranking. For example, in $\profile_1$, $a$ is the unique plurality winner, since there's 102 voters on $a$, even though it's not a majority.
+
+\subsection{Copeland}
+
+But it's unreasonable to ignore the rest part of the ranking. To make fuller use of the information in the ranking, we use \textit{net preference}:
+~\\
+\begin{definition}[net preference]
+    $\mathit{Net}_\profile(a>b) = |\{j \in N\;|\; a \succ_j b\}| - |\{j \in N\;|\; b \succ_j a\}|$
+\end{definition}
+
+If the net preference for $a$ over $b$ is strictly positive ($\mathit{Net}_\profile(a>b) > 0$), then we say $a$ beats $b$ in the \textit{pairwise majority} sense, denoted as $a >^\mu b$ or $a >^\mu_\profile b$ with profile, where $>^\mu$ is the strict \textit{pairwise majority} relation, which is always complete for an odd number of voters with strict preferences; and $\geq^\mu$ is the weak version.
+
+Also we can use tournament to depict $>^\mu$. Below is an example, where left is the pairwise majority tournament and right is weighted version for $\profile_1$.
+
+\begin{center}
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,shorten <=1pt, auto,node distance=1.5cm,semithick]
+        \node (a) at (0,0) {$a$};
+        \node (b) at (1.5,2) {$b$};
+        \node (c) at (3,0) {$c$};
+        \node (a') at (5,0) {$a$};
+        \node (b') at (6.5,2) {$b$};
+        \node (c') at (8,0) {$c$};
+
+        \path[->] (a) edge (b);
+        \path[->] (b) edge (c);
+        \path[->] (c) edge (a);
+        \path[->] (a') edge node[left]{100} (b');
+        \path[->] (b') edge node[right]{102} (c');
+        \path[->] (c') edge node[below]{100} (a');
+    \end{tikzpicture}
+\end{center}
+
+The next voting rule use \textit{Copeland scores} to select winners. A (symmetric) Copeland score of alternative $x$ is:
+\begin{definition}[(symmetric) Copeland score]
+    $\mathit{Copeland}(x) = |\{y \in A\;|\; x >^\mu y\}| - |\{y \in A\;|\; y >^\mu x\}|$
+\end{definition}
+
+The Copeland rule selects the alternative(s) with highest Copeland score. In $\profile_1$ for example, $a$'s Copeland scores is $0$, since $a \pma b$ and $c \pma a$. So as $b \mbox{ and } c$. Thus the winning set of $\profile_1$ is $\{a,b,c\}$.
+
+\subsection{Borda}
+
+In the case of Copeland rule, for every alternative $a$, all we care about is how many times $a$ has been defeated and won. However, as we can notice, the margins of victory or defeat matter as well. If we take these margins into consideration, things will be different.
+
+Given a profile $\profile$, the \textit{symmetric Borda score} of an alternative $x$ is\footnote{Noted that the definition here is nonstandard, the standard version will come up later.}:
+\begin{definition}[symmetric Borda score]
+    \label{sbor}
+    $\mathit{Borda}^{\mathit{sym}}_\profile (x) = \sum_{y \in A} \mathit{Net}_\profile (x > y)$
+\end{definition}
+
+Under Borda rule, alternative(s) with the highest Borda score is the winner(s). In $\profile_1$, the scores of $a,b,c$ are $0,2,-2$ respectively, thus the winner is $b$.
+
+A more common asymmetric Borda score is defined via the \textit{vector of scoring weights} (score vector) $\mathbf{w}$:
+
+\begin{definition}[asymmetric Borda score]
+    For $|A| = m$. Let $\mathbf{w} = {m-1,m-2,m-3,\dots,0}$. $\mathit{Borda}^{\mathit{asym}}_\profile (x)$ is the sum of points awarded to x by all voters, where for voter $i$, if $a$ is top-ranked then $a$ get $(m-1)$ points, if the next then $(m-2)$\dots\dots, and $0$ to the least preferred.
+\end{definition}
+
+Noted that the two versions of Borda score are affinely equivalent, with $\mathit{Borda}^{\mathit{asym}}_\profile (x) = n + \frac{1}{2} \mathit{Borda}^{\mathit{sym}}_\profile (x)$, so they induce the same SCF\footnote{Don't understand what `affinely' mean\dots\dots}. Actually, if we make $\mathbf{w} = \{m-1,m-3,m-5,\dots,-(m-1)\}$, then we replicate the scores from \cref{sbor}. An adventage of symmetric approach is that it's well-defined for profiles which is weak preferences, thus the symmetric Copeland and Borda rules can be extended to weak preference cases.
+
+\subsection{Social Choice Function}
+
+Let $\mathcal{C}(X)$ denote the set of all nonempty subsets of a set $X$.
+
+\begin{definition}[social choice function]
+    \label{SCF}
+    \begin{itemize}
+        \item A \textit{social choice function} (SCF) is a map $f:\; \linearor^n \to \ca$ that returns a nonempty set of alternatives for each profile of strict preference.
+        \item If $f(\profile) = 1$ then $f$ is \textit{single valued} on $\profile$ and sometimes we write $f(\profile) = x$ instead of $f(\profile) = \{x\}$.
+        \item A \textit{resolute} SCF is one with no tied: it's single valued on all profiles.
+    \end{itemize}
+\end{definition}
+
+Above are fixed electorate SCFs. We can substitude $\linearor^\infty$ for $\linearor^n$, from which we get variable electorate SCFs. Notice that the rest of this chapter presumes a fixed electorate, except where explicitly noted otherwise.
+
+In \cref{SCF}, the value of the function is a group of winners, while in preceding three rules, we not only concentrate on the winner(s), but also the "social ranking"---one alternative is ranked over another if it has a higher score. Here we don't restrict the ranking to be strict, which leads to the definition below:
+
+\begin{definition}[social welfare function]
+    A \textit{social welfare function} (SWF), is a map $f:\; \linearor^n \to \weakor$ that returns a weak ranking of the set of alternatives for each profile of strict preferences.
+\end{definition}
+
+\subsection{Strategic Manipulation}
+
+Now we take a look at some occasions where voters may have an incentive to cast insincere ballots under such voting rules.
+
+Consider Ali, one of the two $a \succ b \succ c \succ d \succ e$ voters of profile $\profile_2$.
+\begin{center}
+    \begin{tabular}{ccc}
+        2 & 3 & 2\\
+        \hline
+        $e$ & $ d $ & $ a$\\
+        $c $&$ e $&$ b$\\
+        $a $&$ b $&$ c$\\
+        $d $&$ c $&$ d$\\
+        $b $&$ a $&$ e$
+    \end{tabular}
+\end{center}
+
+Under Copeland, Ali's least preferred alternative $e$ wins: $e$'s (symmetric) Copeland score is $2$, $b$'s is $-2$ and the other scores are each $0$. However, if Ali misrepresents his sincere preferences as a reverse of his ranking, the Copeland winner shifts to $d$, where $d \succ_{Ali} e$, with a score of $4$, the maximum possible.
+
+\begin{definition}
+    \begin{itemize}
+        \item An SCF $f$ is \textit{single voter manipulable} if for some pair $\profile,\, \profile'$ of profiles on which $f$ is single valued, and voter $i$ with $\succsim'_j = \succsim_j$ for all $j \neq i$, $f(\profile') \succ_i f(\profile)$;
+        \item $f$ is \textit{single voter strategyproof} if it's not single voter manipulable.
+    \end{itemize}
+\end{definition}
+
+$\succ_i$ stands for the sincere preference, while $\succ'_i$ is the insincere one. An SCF being single voter manipulable means that if voters give an insincere ranking then he'll get a better result.
+
+Under Copeland rule, Ali has to reverse the ballot. And under Borda rule, he can still do such things---by just lifting $d$ to the top position ($d \succ a \succ b \succ c \succ e$).
+
+Plurality voting is not single voter manipulable, since it only care about the top-ranked alternatives. Any voter who wants $x$ rather than $y$ to be the winner won't place $y$ in the top on his sincere ballot, so he cannot lower $y$'s score. But if there's two voters switching there ballot, then Plurality voting can be manipulable as well.
+
+Obviously voting rules with ties or single voter manipulable is inappropriate, thus we have to deal with such problem. That's what we do in the later section.
