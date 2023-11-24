@@ -110,5 +110,11 @@ Participation is a corresponding version of strategyproofness for no-show parado
 \begin{proof}
     The proof of \textit{Item I} and \textit{Item II} is straightforward, except for the first arrow in Item I. Consider an SCF $f$ which violates Maskin monotonicity. Let $a, b \in A$, $\profile$ be a profile where $f(\profile) = \{a\}$ and for voter $i$, $b \succsim_i a$. Now $\profile'$ is modified from $\profile$ by changing $b \succsim_i a$ to $a \succsim_i b$, and $f(\profile') \neq \{a\}$. 
     If $f(\profile') = \{b\}$ or any other alternatives $c$ with $c \succsim_i a$, then a voter with sincere preference $\succsim_i$ would gain a better result by casting the insincere ballot $\succsim'_i$. Otherwise a voter with sincere preference $\succsim'_i$ can change his ballot to $\succsim$. Thus $f$ is not strategyproofness.\\
-    For \textit{Item III}, see \textcite{sanver_one-way_2009}. 
+    For \textit{Item III}, see \textcite{sanver_one-way_2009}. Note that the original proof aims at proving participation $\Rightarrow$ one-way monotonicity,  but failed.\\
+    Let $\profile \in \mathrm{Dom}(f)$ be a profile and $s,t$ be two preference given by two voters $s \mbox{ and } t$ seperately. Assume that $f$ is an SCF satisfying participation with $f(\profile \wedge s) = a$ and $f(\profile \wedge t) = b$, we show that $a \succsim_s b$ or $b \succsim_t a$. Consider 3 cases:
+    \begin{itemize}
+        \item \textit{Case 1:} $f(\profile) = a$ or $f(\profile) = b$. If $f(\profile) = a$, since $f(\profile \wedge t) = b$, $b \succsim_t a$ by participation; if $f(\profile) = b$, then similarly $a \succsim_s b$.
+        \item \textit{Case 2:} $f(\profile \wedge s \wedge t) = a$ or $f(\profile \wedge s \wedge t) = b$. It's analogous to the preceding case.
+        \item \textit{Case 3:} $f(\profile) = x$ with $x \not \in \{s,t\}$ and $f(\profile \wedge s \wedge t) = y$ with $y \not \in \{s,t\}$. By participation we have $a \succsim_s x$, $b \succsim_t x$, $y \succsim_s b$ and $y \succsim_t a$. If $\succsim_s = \succsim^{rev}_t$ then $a \succsim_s x$ and $x \succsim_s b$, thus $a \succsim_s b$ as desired.
+    \end{itemize}
 \end{proof}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.7.16)  23 NOV 2023 17:21
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.7.16)  24 NOV 2023 08:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2099,11 +2099,11 @@ Package hyperref Info: bookmark level for unknown remark defaults to 0 on input 
 Package mdframed Info: Not enough space on this page on input line 97.
 [18]
 Package mdframed Info: Not enough space on this page on input line 97.
-) [19]
+ [19]) [20]
 \tf@thm=\write8
 \openout8 = `"Notes for CSC.thm"'.
 
- [20
+ [21
 
 
 
@@ -2135,12 +2135,12 @@ Package logreq Info: Writing requests to '"Notes for CSC".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46844 strings out of 475890
- 962075 string characters out of 5779826
- 1985418 words of memory out of 5000000
- 67067 multiletter control sequences out of 15000+600000
+ 46845 strings out of 475890
+ 962087 string characters out of 5779826
+ 1985438 words of memory out of 5000000
+ 67068 multiletter control sequences out of 15000+600000
  654591 words of font info for 180 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  137i,10n,143p,1015b,5577s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Notes for CSC.pdf (21 pages).
+Output written on Notes for CSC.pdf (22 pages).
