@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.7.16)  24 NOV 2023 08:53
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.7.16)  25 NOV 2023 21:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1487,7 +1487,7 @@ Package fontspec Info: Font family 'TeXGyrePagellaX(0)' created for font
 (fontspec)             <->s*[1]"[TeXGyrePagellaX-BoldSlanted.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
 
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaX(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 42.
+(Font)              scaled to size 10.95pt on input line 43.
 Requested font "[TeXGyrePagellaX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 10.95pt
  -> d:/Code/texlive/2023/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Regular.otf
 \@quotelevel=\count556
@@ -1495,50 +1495,50 @@ Requested font "[TeXGyrePagellaX-Regular.otf]/OT:script=latn;language=dflt;-ss05
  (./Notes for CSC.aux (./Chap1_introCSC/Arrow's_Theorem.aux) (./Chap2/SCF.aux) (./Chap2/Axiom_I.aux) (./Chap2/Axiom_II.aux))
 \openout1 = `"Notes for CSC.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 42.
-LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 42.
+LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 43.
+LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 43.
  (d:/Code/texlive/2023/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 43.
  (d:/Code/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 42.
-LaTeX Font Info:    Trying to load font information for U+npxexa on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for U+npxexa on input line 43.
  (d:/Code/texlive/2023/texmf-dist/tex/latex/newpx/unpxexa.fd
 File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 42.
-LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 43.
  (d:/Code/texlive/2023/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
 File: lmsnpxsy.fd 2016/07/04 Fontinst v1.933 font definitions for LMS/npxsy.
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 42.
-LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 43.
+LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 43.
  (d:/Code/texlive/2023/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
 File: lmxnpxexx.fd 2016/07/04 Fontinst v1.933 font definitions for LMX/npxexx.
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1574,14 +1574,14 @@ LaTeX Font Info:    ... okay on input line 42.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 42.
-LaTeX Info: Command `\ddddot' is already robust on input line 42.
+LaTeX Info: Command `\dddot' is already robust on input line 43.
+LaTeX Info: Command `\ddddot' is already robust on input line 43.
 (d:/Code/texlive/2023/texmf-dist/tex/latex/fmtcount/fc-english.def
 Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
 File: fc-english.def 2016/01/12
 )
-Package hyperref Info: Link coloring ON on input line 42.
+Package hyperref Info: Link coloring ON on input line 43.
  (./Notes for CSC.out) (./Notes for CSC.out)
 \@outlinefile=\write6
 \openout6 = `"Notes for CSC.out"'.
@@ -1617,14 +1617,14 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '"Notes for CSC".bbl' found.
  (./Notes for CSC.bbl)
-Package biblatex Info: Reference section=0 on input line 42.
-Package biblatex Info: Reference segment=0 on input line 42.
+Package biblatex Info: Reference section=0 on input line 43.
+Package biblatex Info: Reference segment=0 on input line 43.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaX(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 45.
+(Font)              scaled to size 17.28pt on input line 46.
 Requested font "[TeXGyrePagellaX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 17.28pt
  -> d:/Code/texlive/2023/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Regular.otf
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaX(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 45.
+(Font)              scaled to size 12.0pt on input line 46.
 Requested font "[TeXGyrePagellaX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 12.0pt
  -> d:/Code/texlive/2023/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Regular.otf
  [1
@@ -1632,15 +1632,15 @@ Requested font "[TeXGyrePagellaX-Regular.otf]/OT:script=latn;language=dflt;-ss05
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaX(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 47.
+(Font)              scaled to size 24.88pt on input line 48.
 Requested font "[TeXGyrePagellaX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 24.88pt
  -> d:/Code/texlive/2023/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Regular.otf
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaX(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 47.
+(Font)              scaled to size 24.88pt on input line 48.
 Requested font "[TeXGyrePagellaX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 24.88pt
  -> d:/Code/texlive/2023/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Bold.otf
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaX(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 49.
+(Font)              scaled to size 10.95pt on input line 50.
 Requested font "[TeXGyrePagellaX-Italic.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 10.95pt
  -> d:/Code/texlive/2023/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Italic.otf
  [1
@@ -2083,27 +2083,38 @@ Requested font "[TeXGyrePagellaX-Italic.otf]/OT:script=latn;language=dflt;-ss05;
 \openout2 = `Chap2/Axiom_II.aux'.
 
  (./Chap2/Axiom_II.tex
-Package mdframed Info: Not enough space on this page on input line 39.
+Package mdframed Info: Not enough space on this page on input line 40.
  [17
 
 
 
 ]
-Package mdframed Info: Not enough space on this page on input line 39.
+Package mdframed Info: Not enough space on this page on input line 40.
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--67
+Underfull \hbox (badness 10000) in paragraph at lines 43--68
 
  []
 
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 81.
-Package mdframed Info: Not enough space on this page on input line 97.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 82.
+Package mdframed Info: Not enough space on this page on input line 98.
 [18]
-Package mdframed Info: Not enough space on this page on input line 97.
- [19]) [20]
+Package mdframed Info: Not enough space on this page on input line 98.
+ [19]
+Package mdframed Info: Not enough space on this page on input line 160.
+ [20]
+Package mdframed Info: Not enough space on this page on input line 160.
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--181
+
+ []
+
+[21]
+Package mdframed Info: Not enough space on this page on input line 183.
+) [22]
 \tf@thm=\write8
 \openout8 = `"Notes for CSC.thm"'.
 
- [21
+ [23
 
 
 
@@ -2120,27 +2131,19 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `"Notes for CSC".out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                "Notes for CSC"
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to '"Notes for CSC".run.xml'.
 \openout1 = `"Notes for CSC.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46845 strings out of 475890
- 962087 string characters out of 5779826
- 1985438 words of memory out of 5000000
- 67068 multiletter control sequences out of 15000+600000
+ 46875 strings out of 475890
+ 962747 string characters out of 5779826
+ 1986438 words of memory out of 5000000
+ 67098 multiletter control sequences out of 15000+600000
  654591 words of font info for 180 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  137i,10n,143p,1015b,5577s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Notes for CSC.pdf (22 pages).
+Output written on Notes for CSC.pdf (24 pages).

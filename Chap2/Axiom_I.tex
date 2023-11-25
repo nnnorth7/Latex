@@ -98,10 +98,10 @@ Notice that PMR is an SCF with \textit{restricted domain}, since it has the poss
     \end{itemize}
 \end{definition}
 
-\begin{proposition}[Campbell-Kelly Theorem]
+\begin{theorem}[Campbell-Kelly Theorem]
     \label{ThCK}
     Consider SCFs with domain $\condom$ for three or more alternatives. Pairwise Majority Rule is resolute, anonymous, neutral, and strategyproof; for an odd number of voters, it is the unique such rule.
-\end{proposition}
+\end{theorem}
 
 If we restrict $f$'s domain to $\condom$, then \cref{ThCK} can be seen as “May's Theorem for three or more alternatives”, specially for strategyproof, when $|A| = 2$ it can be shown that monotonicity is equivalent to strategyproof.
 
@@ -115,9 +115,11 @@ Note that Condorcet extension isn't necessary when choosing a voting rule. Borda
 Condorcet extensions form the first class of voting rules. The second class is \textit{scoring rules}:
 
 \begin{definition}
+    \label{scoring_rule}
     \begin{itemize}
         \item A \textit{score vector} $\mathbf{w} = (w_1,w_2,\dots,w_m)$ consists of real number \textit{scoring weights}. 
         \item $\mathbf{w}$ is \textit{proper} if $w_1 \geq w_2 \geq \dots \geq w_m$ and $w_1 > w_m$.
+        \item Every score vector induces a \emph{scoring rule}.
         \item A \textit{proper scoring rule} is one induced by a proper score vector, in which each voter awards $w_1$ points to their top-ranked alternative, $w_2$ points to their second-ranked, and so on. All points awarded to a given alternative are summed, and the winner is the alternative(s) with greatest sum.
     \end{itemize}
 \end{definition}

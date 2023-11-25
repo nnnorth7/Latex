@@ -352,6 +352,57 @@
       \field{pages}{824\bibrangedash 838}
       \range{pages}{15}
     \endentry
+    \entry{Young_1978}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d1013deac2004326322710ff7345fa4a}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={H.\bibnamedelimi P.},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6823d7a9b27765c646a6a3c2f37a5654}{%
+           family={Levenglick},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
+      }
+      \strng{namehash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{fullhash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{bibnamehash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{authorbibnamehash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{authornamehash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{authorfullhash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00361399}
+      \field{journaltitle}{SIAM Journal on Applied Mathematics}
+      \field{number}{2}
+      \field{title}{A Consistent Extension of Condorcet's Election Principle}
+      \field{urlday}{25}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{volume}{35}
+      \field{year}{1978}
+      \field{urldateera}{ce}
+      \field{pages}{285\bibrangedash 300}
+      \range{pages}{16}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2100667
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2100667
+      \endverb
+    \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
     \entry{fishburn_paradoxes_1983}{article}{}
@@ -686,6 +737,57 @@
       \field{urldateera}{ce}
       \field{pages}{824\bibrangedash 838}
       \range{pages}{15}
+    \endentry
+    \entry{Young_1978}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d1013deac2004326322710ff7345fa4a}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={H.\bibnamedelimi P.},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6823d7a9b27765c646a6a3c2f37a5654}{%
+           family={Levenglick},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
+      }
+      \strng{namehash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{fullhash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{bibnamehash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{authorbibnamehash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{authornamehash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \strng{authorfullhash}{fe3e2a73d5951c47864a9d15012d66ae}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00361399}
+      \field{journaltitle}{SIAM Journal on Applied Mathematics}
+      \field{number}{2}
+      \field{title}{A Consistent Extension of Condorcet's Election Principle}
+      \field{urlday}{25}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{volume}{35}
+      \field{year}{1978}
+      \field{urldateera}{ce}
+      \field{pages}{285\bibrangedash 300}
+      \range{pages}{16}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2100667
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2100667
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

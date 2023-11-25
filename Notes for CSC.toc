@@ -14,3 +14,4 @@
 \contentsline {section}{\numberline {2.4}Voting Rules I: Condorcet Extensions, Scoring Rules, and Run-Offs}{14}{section.2.4}%
 \contentsline {section}{\numberline {2.5}An Informational Basis for Voting Rules: Fishburn's Classification}{16}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Axioms II: Reinforcement and Monotonicity Properties}{17}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Voting Rules II: Kemeny and Dodgson}{20}{section.2.7}%

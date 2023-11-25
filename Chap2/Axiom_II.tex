@@ -35,6 +35,7 @@ Notice that on a domain that is restricted by fixing an upper bound on the numbe
 \end{proof}
 
 \begin{proposition}
+    \label{not_reinforcing}
     All Condorcet extension SCFs for three or more alternatives violate reinforcement.
 \end{proposition}
 
@@ -118,3 +119,74 @@ Participation is a corresponding version of strategyproofness for no-show parado
         \item \textit{Case 3:} $f(\profile) = x$ with $x \not \in \{s,t\}$ and $f(\profile \wedge s \wedge t) = y$ with $y \not \in \{s,t\}$. By participation we have $a \succsim_s x$, $b \succsim_t x$, $y \succsim_s b$ and $y \succsim_t a$. If $\succsim_s = \succsim^{rev}_t$ then $a \succsim_s x$ and $x \succsim_s b$, thus $a \succsim_s b$ as desired.
     \end{itemize}
 \end{proof}
+
+Note that the definition of participation here is a typical form for fixed-electorate SCF, while as a property of variable-electorate SCFs, participation cannot follow from strategyproofness.
+
+\begin{theorem}
+    \label{conext}
+    Let $f$ be any resolute Condorcet extension for four or more alternatives. Then
+    \begin{enumerate}
+        \item $f$ violates participation (if $f$ is a variable-electorate SCF) and
+        \item $f$ violates half-way monotonicity (if $f$ is a fixed-electorate SCF for sufficiently large $n$).
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{corollary}
+    Let $f$ be a resolute SCF for four or more alternatives and sufficiently large odd $n$. If $f$ is neutral and anonymous on $\condom$, then either $f$ fails to be strategyproof on $\condom$,or $f$ violates half-way monotonicity.
+\end{corollary}
+
+\begin{proof}
+    Recall \cref{ThCK}, we know that PMR is the unique resolute, anonymous, neutral and strategyproof SCF on $\condom$ for odd $n$. Thus for $f$ satisfying the conditions above, if $f$ is a strategyproof on $\condom$, then $f$ must be a Condorcet extension. By \cref{conext}, $f$ violates half-way monotonicity.
+\end{proof}
+
+
+\section{Voting Rules II: Kemeny and Dodgson}
+
+John Kemeny defined a neutral, anonymous, and reinforcing Condorcet extension that escapes the limitation in \cref{not_reinforcing} by using the \textit{social preference function}, whose outcome is a set of one or more rankings. Here is his basic method.
+
+\begin{definition}
+    \begin{itemize}
+        \item The \emph{Kendall tau metric} $d_K$ measures the distance between two linear orderings $\succ,\;\succ^\star$ by counting pairs of alternatives on which they disagree, i.e. 
+        $$d_K (\succ,\;\succ^\star) = |\{(a,b) \in A^2 \;|\; a \succ b \mbox{ and } b \succ^\star a\}|.$$
+        \item $d$ on profiles is an extension of $d$ on a ballot, where
+        $$d(\profile,\profile') = \sum_{i = 1}^{n} d (\succ, \succ')$$
+        \item For each $\succ$ define the unanimous profile $U^\succ$ by $U^\succ_i = \succ$ for all i.
+        \item For any profile $\profile$, the \emph{Kemeny Rule} returns the ranking(s) $\succ$ minimizing $d_K(\profile,U^\succ)$.
+    \end{itemize}
+\end{definition}
+
+$d_K(\succ,\succ^\star)$ gives the minimum number of sequential inversions needed to convert $\succ$ to $\succ^\star$ and analogously we get what $d_K (\profile,U^\succ)$ means. Noted that Kemeny Rule is a Condorcet extension: If $a$ is $\profile$'s Condorcet winner and $\succ$ does not put $a$ on top, then lifting $a$ simply to the top would strictly decrease $d_K(\profile,U^\succ)$, thus $d_K(\profile,U^\succ)$ is not minimal and all rankings in the Kemeny outcome place $a$ on top, from which we have Kemeny Rule is a Condorcet extension.
+
+Kemeny Rule is also a scoring rule, although not in the sense of \cref{scoring_rule}. Consider a definition in the following:
+
+\begin{definition}[ranking score rule]
+    \begin{itemize}
+        \item A \emph{ranking score function} $\scoringvec:\; \linearor \times \linearor \to \mathbb{R}$ assigns a real number scoring weight $\scoringvec(\succ^\star, \succ)$ to each pair of rankings.
+        \item Any such function induces a \emph{ranking scoring rule}, in which a voter with ranking $\succ_i$ awards $\scoringvec(\succ_i, \succ)$ points to each ranking $\succ \in \linearor$. All points awarded to a given ranking are summed, and the winner is the ranking(s) with greatest sum.
+    \end{itemize}
+\end{definition}
+
+The definition above extends the range of scoring rule to include Kemeny Rule. The scoring weight $\scoringvec(\succ^\star, \succ) = \frac{m(m-1)}{2} - d_K(\succ^\star,\succ)$.
+
+It's obvious that Kemeny Rule is neutral and anonymous. For Reinforcement, since the outcome is no longer a winning set, but a set of rankings, the reinforcement requirement have actually been weakened, where $f(s+t)$ denote \emph{sets of rankings}. Consider the requirement of reinforcement:
+$$
+f(s) \cap f(t) \neq \emptyset \Rightarrow f(s+t) = f(s) \cap f(t)
+$$
+but for the situation likely to \cref{not_reinforcing}, $f_{\textit{Kem}}(s) = \{a \succ b \succ c,\; b \succ c \succ a,\; c \succ a \succ b\}$, $f_{\textit{Kem}} = \{b \succ a \succ c\}$ and $f(s) \cap f(t)$ is empty.\\
+~\\
+\begin{theorem}[\parencite{Young_1978}]
+    Among social preference functions Kemeny's rule is the unique neutral and reinforcing Condorcet extension.
+\end{theorem}
+
+Another famous voting rule which is often compared to Kemeny's rule is proposed by Charles Dodgson.
+
+\begin{definition}
+    For any profile $\profile$ the Dodgson rule returns the Condorcet winner(s) for the profile(s) $\profile' \in \condom$ minimizing $d_K (\profile,\profile')$ among all $P' \in \condom$.
+\end{definition}
+
+Next paragraph is cited from \textcite{brandt_handbook_2016}:
+``Both Kemeny and Dodgson may be interpreted as minimizing a distance to “consensus.” They use the same metric on rankings, but different notions of consensus: unanimity for Kemeny versus membership in $\condom$ for Dodgson. It is not difficult to see that every preference function that can be defined by minimizing distance to unanimity is a ranking scoring rule,75 hence is reinforcing in the preference function sense. We can convert a preference function into an SCF by selecting all top-ranked alternatives from winning rankings, but this may transform a reinforcing preference function into an nonreinforcing SCF—as happens for Kemeny. The conversion preserves homogeneity, however, so every distance-from-unanimity minimizer is homogeneous as a social choice function. In this light, the inhomogeneity of Dodgson argues an advantage for unanimity over $\condom$ as a consensus notion.''

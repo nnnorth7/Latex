@@ -20,13 +20,17 @@
 \contentsline {proposition}{{Proposition}{2.2}{May's Theorem}}{14}{proposition.2.2}%
 \contentsline {proof}{{\textcolor {RoyalBlue}{Proof}}{7}{}}{15}{proof.7}%
 \contentsline {definition}{{Definition}{2.10}{Condorcet winner}}{15}{definition.2.10}%
-\contentsline {proposition}{{Proposition}{2.3}{Campbell-Kelly Theorem}}{15}{proposition.2.3}%
+\contentsline {theorem}{{Theorem}{2.1}{Campbell-Kelly Theorem}}{15}{theorem.2.4.1}%
 \contentsline {proof}{{\textcolor {RoyalBlue}{Proof}}{8}{}}{15}{proof.8}%
 \contentsline {definition}{{Definition}{2.13}{Reinforcement (aka Consistency)}}{17}{definition.2.13}%
 \contentsline {definition}{{Definition}{2.14}{Homogeneity}}{17}{definition.2.14}%
 \contentsline {definition}{{Definition}{2.15}{Compound Scoring Rules}}{17}{definition.2.15}%
-\contentsline {theorem}{{Theorem}{2.1}{See \textcite {John_compound} and \textcite {young_social_1975}}}{17}{theorem.2.6.1}%
+\contentsline {theorem}{{Theorem}{2.2}{See \textcite {John_compound} and \textcite {young_social_1975}}}{17}{theorem.2.6.2}%
 \contentsline {proof}{{\textcolor {RoyalBlue}{Proof}}{9}{}}{17}{proof.9}%
 \contentsline {proof}{{\textcolor {RoyalBlue}{Proof}}{10}{}}{18}{proof.10}%
 \contentsline {remark}{{\textcolor {Maroon}{Remark}}{1}{}}{18}{remark.1}%
 \contentsline {proof}{{\textcolor {RoyalBlue}{Proof}}{11}{}}{19}{proof.11}%
+\contentsline {proof}{{\textcolor {RoyalBlue}{Proof}}{12}{}}{20}{proof.12}%
+\contentsline {proof}{{\textcolor {RoyalBlue}{Proof}}{13}{}}{20}{proof.13}%
+\contentsline {definition}{{Definition}{2.19}{ranking score rule}}{21}{definition.2.19}%
+\contentsline {theorem}{{Theorem}{2.4}{\parencite {Young_1978}}}{21}{theorem.2.7.4}%
