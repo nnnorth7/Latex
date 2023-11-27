@@ -26,7 +26,7 @@ Noted that all scoring rules are reinforcing, since if some alternatives get the
 
 Notice that on a domain that is restricted by fixing an upper bound on the number of voters, every such compound rule is equivalent to some simple scoring rule\footnote{Why??????Anyone can tell me why\dots?????????}.
 
-\begin{theorem}[See \textcite{John_compound} and \textcite{young_social_1975}]
+\begin{theorem}[See \textcite{smithAggregationPreferencesVariable1973} and \textcite{youngSocialChoiceScoring1975}]
     The anonymous, neutral, and reinforcing SCFs are exactly the compound scoring rules.
 \end{theorem}
 
@@ -89,15 +89,15 @@ Thus monotonicity is a weak form of strategyproofness. Below are some relavent d
     A resolute SCF $f$ satisfies:
     \begin{itemize}
         \item \textit{Strategyproofness} if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim'_i$ , $f(\profile) \succsim_i f(\profile')$.
-        \item \textit{Maskin monotonicity} (aka \textit{strong monotonicity}) if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to a ballot $\succsim'_i$ satisfying for all $y,\; f(\profile) \succsim_i y \Rightarrow f(\profile) \succsim'_i y$ then $f(\profile') = f(\profile)$\footnote{See \textcite{maskin1999}. The original definition is based on not only resolute SCF: $f$ is Maskin monotonic if $\forall a \in f(\profile)$, if $\forall i \in N,\; \forall b \in A,\; a \succsim_i b \Rightarrow a \succsim'_i b$, then $a \in f(\profile')$. It can be understood as, if $a$ does not fall below any alternatives that it was not below before, then $a$ will still be the winner.}.
+        \item \textit{Maskin monotonicity} (aka \textit{strong monotonicity}) if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to a ballot $\succsim'_i$ satisfying for all $y,\; f(\profile) \succsim_i y \Rightarrow f(\profile) \succsim'_i y$ then $f(\profile') = f(\profile)$\footnote{See \textcite{Maskin1999}. The original definition is based on not only resolute SCF: $f$ is Maskin monotonic if $\forall a \in f(\profile)$, if $\forall i \in N,\; \forall b \in A,\; a \succsim_i b \Rightarrow a \succsim'_i b$, then $a \in f(\profile')$. It can be understood as, if $a$ does not fall below any alternatives that it was not below before, then $a$ will still be the winner.}.
         \item \textit{Down monotonicity} if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim'_i$ by dropping a losing alternative $b \neq f(\profile)$ simply, $f(\profile') = f(\profile)$.
-        \item \textit{One-way monotonicity} if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim'_i$, $f(\profile) \succsim_i f(\profile')$ or $f(\profile') \succsim_i f(\profile)$\footnote{See \textcite{sanver_one-way_2009}: It asserts that whenever one identification represents a successful manipulation, the other represents a failure.}
+        \item \textit{One-way monotonicity} if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim'_i$, $f(\profile) \succsim_i f(\profile')$ or $f(\profile') \succsim_i f(\profile)$\footnote{See \textcite{sanverOnewayMonotonicityForm2009}: It asserts that whenever one identification represents a successful manipulation, the other represents a failure.}
         \item \textit{Half-way monotonicity} if whenever a profile $\profile$ is modified to $\profile'$ by having one voter $i$ switch $\succsim_i$ to $\succsim^{rev}_i$, $f(\profile) \succsim_i f(\profile')$, where $\succsim^{rev}$ denotes the reverse of $\succsim$.
         \item \textit{Participation} (the absence of no show paradoxes) if whenever a profile $\profile$ is modified to $\profile'$ by adding one voter $i$ with ballot $\succsim_i$ to the electorate, $f(\profile') \succsim_i f(\profile)$.
     \end{itemize}
 \end{definition}
 
-Participation is a corresponding version of strategyproofness for no-show paradox. No-show paradox, first come up by \textcite{fishburn_paradoxes_1983}, also mentioned by \textcite{sanver_one-way_2009}, shows that, one additional participating voter shows up to cast her vote, and the winner is then an alternative that is strictly inferior (according to the preferences of the participating voter) to the alternative who would have won had she not shown up. Thus the paradox implies an opportunity to manipulate by abstaining.
+Participation is a corresponding version of strategyproofness for no-show paradox. No-show paradox, first come up by \textcite{fishburnParadoxesPreferentialVoting1983}, also mentioned by \textcite{sanverOnewayMonotonicityForm2009}, shows that, one additional participating voter shows up to cast her vote, and the winner is then an alternative that is strictly inferior (according to the preferences of the participating voter) to the alternative who would have won had she not shown up. Thus the paradox implies an opportunity to manipulate by abstaining.
 
 \begin{proposition}
     For resolute SCFs:
@@ -111,7 +111,7 @@ Participation is a corresponding version of strategyproofness for no-show parado
 \begin{proof}
     The proof of \textit{Item I} and \textit{Item II} is straightforward, except for the first arrow in Item I. Consider an SCF $f$ which violates Maskin monotonicity. Let $a, b \in A$, $\profile$ be a profile where $f(\profile) = \{a\}$ and for voter $i$, $b \succsim_i a$. Now $\profile'$ is modified from $\profile$ by changing $b \succsim_i a$ to $a \succsim_i b$, and $f(\profile') \neq \{a\}$. 
     If $f(\profile') = \{b\}$ or any other alternatives $c$ with $c \succsim_i a$, then a voter with sincere preference $\succsim_i$ would gain a better result by casting the insincere ballot $\succsim'_i$. Otherwise a voter with sincere preference $\succsim'_i$ can change his ballot to $\succsim$. Thus $f$ is not strategyproofness.\\
-    For \textit{Item III}, see \textcite{sanver_one-way_2009}. Note that the original proof aims at proving participation $\Rightarrow$ one-way monotonicity,  but failed.\\
+    For \textit{Item III}, see \textcite{sanverOnewayMonotonicityForm2009}. Note that the original proof aims at proving participation $\Rightarrow$ one-way monotonicity,  but failed.\\
     Let $\profile \in \mathrm{Dom}(f)$ be a profile and $s,t$ be two preference given by two voters $s \mbox{ and } t$ seperately. Assume that $f$ is an SCF satisfying participation with $f(\profile \wedge s) = a$ and $f(\profile \wedge t) = b$, we show that $a \succsim_s b$ or $b \succsim_t a$. Consider 3 cases:
     \begin{itemize}
         \item \textit{Case 1:} $f(\profile) = a$ or $f(\profile) = b$. If $f(\profile) = a$, since $f(\profile \wedge t) = b$, $b \succsim_t a$ by participation; if $f(\profile) = b$, then similarly $a \succsim_s b$.
@@ -178,7 +178,7 @@ f(s) \cap f(t) \neq \emptyset \Rightarrow f(s+t) = f(s) \cap f(t)
 $$
 but for the situation likely to \cref{not_reinforcing}, $f_{\textit{Kem}}(s) = \{a \succ b \succ c,\; b \succ c \succ a,\; c \succ a \succ b\}$, $f_{\textit{Kem}} = \{b \succ a \succ c\}$ and $f(s) \cap f(t)$ is empty.\\
 ~\\
-\begin{theorem}[\parencite{Young_1978}]
+\begin{theorem}[\parencite{youngConsistentExtensionCondorcet1978}]
     Among social preference functions Kemeny's rule is the unique neutral and reinforcing Condorcet extension.
 \end{theorem}
 
@@ -188,5 +188,5 @@ Another famous voting rule which is often compared to Kemeny's rule is proposed 
     For any profile $\profile$ the Dodgson rule returns the Condorcet winner(s) for the profile(s) $\profile' \in \condom$ minimizing $d_K (\profile,\profile')$ among all $P' \in \condom$.
 \end{definition}
 
-Next paragraph is cited from \textcite{brandt_handbook_2016}:
+Next paragraph is cited from \textcite{moulinHandbookComputationalSocial2016}:
 ``Both Kemeny and Dodgson may be interpreted as minimizing a distance to “consensus.” They use the same metric on rankings, but different notions of consensus: unanimity for Kemeny versus membership in $\condom$ for Dodgson. It is not difficult to see that every preference function that can be defined by minimizing distance to unanimity is a ranking scoring rule,75 hence is reinforcing in the preference function sense. We can convert a preference function into an SCF by selecting all top-ranked alternatives from winning rankings, but this may transform a reinforcing preference function into an nonreinforcing SCF—as happens for Kemeny. The conversion preserves homogeneity, however, so every distance-from-unanimity minimizer is homogeneous as a social choice function. In this light, the inhomogeneity of Dodgson argues an advantage for unanimity over $\condom$ as a consensus notion.''

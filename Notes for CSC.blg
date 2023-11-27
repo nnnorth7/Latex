@@ -1,19 +1,21 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Notes for CSC.blg'
-[115] biber-MSWIN64:340> INFO - === 
-[161] Biber.pm:419> INFO - Reading 'Notes for CSC.bcf'
-[294] Biber.pm:979> INFO - Found 9 citekeys in bib section 0
-[314] Biber.pm:4419> INFO - Processing section 0
-[326] Biber.pm:4610> INFO - Looking for bibtex file 'social_choice.bib' for section 0
-[387] bibtex.pm:1713> INFO - LaTeX decoding ...
-[405] bibtex.pm:1519> INFO - Found BibTeX data source 'social_choice.bib'
-[489] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[490] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[490] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[490] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[507] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[507] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[507] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[507] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[521] bbl.pm:660> INFO - Writing 'Notes for CSC.bbl' with encoding 'UTF-8'
-[533] bbl.pm:763> INFO - Output to Notes for CSC.bbl
+[132] biber-MSWIN64:340> INFO - === 
+[183] Biber.pm:419> INFO - Reading 'Notes for CSC.bcf'
+[394] Biber.pm:979> INFO - Found 9 citekeys in bib section 0
+[427] Biber.pm:4419> INFO - Processing section 0
+[449] Biber.pm:4610> INFO - Looking for bibtex file 'social_choice.bib' for section 0
+[554] bibtex.pm:1713> INFO - LaTeX decoding ...
+[587] bibtex.pm:1519> INFO - Found BibTeX data source 'social_choice.bib'
+[778] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[778] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[780] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[780] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[819] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[819] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[820] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[820] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[841] bbl.pm:660> INFO - Writing 'Notes for CSC.bbl' with encoding 'UTF-8'
+[865] bbl.pm:763> INFO - Output to Notes for CSC.bbl
+[866] Biber.pm:131> WARN - ISBN '978-1-107-06043-2 978-1-107-44698-4' in entry 'moulinHandbookComputationalSocial2016' is invalid - run biber with '--validate_datamodel' for details.
+[866] Biber.pm:133> INFO - WARNINGS: 1

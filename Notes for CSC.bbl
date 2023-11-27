@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
-    \entry{fishburn_paradoxes_1983}{article}{}
+    \entry{fishburnParadoxesPreferentialVoting1983}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=92e75abaed61a56cc025282d5bd3af6c}{%
            family={Fishburn},
@@ -34,6 +34,9 @@
            giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
       }
+      \list{publisher}{1}{%
+        {Mathematical Association of America}%
+      }
       \strng{namehash}{a55262f662c46250a78dfb7eaed886d0}
       \strng{fullhash}{a55262f662c46250a78dfb7eaed886d0}
       \strng{bibnamehash}{a55262f662c46250a78dfb7eaed886d0}
@@ -47,9 +50,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{jstor}
       \field{issn}{0025570X, 19300980}
       \field{journaltitle}{Mathematics Magazine}
-      \field{note}{Publisher: Mathematical Association of America}
       \field{number}{4}
       \field{title}{Paradoxes of Preferential Voting}
       \field{urlday}{23}
@@ -64,6 +67,9 @@
       \verb{doi}
       \verb 10.2307/2689808
       \endverb
+      \verb{eprint}
+      \verb 2689808
+      \endverb
       \verb{urlraw}
       \verb http://www.jstor.org/stable/2689808
       \endverb
@@ -71,7 +77,7 @@
       \verb http://www.jstor.org/stable/2689808
       \endverb
     \endentry
-    \entry{maskin1999}{article}{}
+    \entry{Maskin1999}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=6aba23f5d6d96846cbc023487696dec4}{%
            family={Maskin},
@@ -96,19 +102,23 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{If A is a set of social alternatives, a social choice rule (SCR) assigns a subset of A to each potential profile of individuals' preferences over A, where the subset is interpreted as the set of "welfare optima". A game form (or "mechanism") implements the social choice rule if, for any potential profile of preferences, (i) any welfare optimum can arise as a Nash equilibrium of the game form (implying, in particular, that a Nash equilibrium exists) and, (ii) all Nash equilibria are welfare optimal. The main result of this paper establishes that any SCR that satisfies two properties-monotonicity and no veto power-can be implemented by a game form if there are three or more individuals. The proof is constructive.}
+      \field{eprinttype}{jstor}
       \field{issn}{00346527, 1467937X}
       \field{journaltitle}{The Review of Economic Studies}
       \field{number}{1}
       \field{title}{Nash Equilibrium and Welfare Optimality}
-      \field{urlday}{23}
+      \field{urlday}{26}
       \field{urlmonth}{11}
       \field{urlyear}{2023}
       \field{volume}{66}
       \field{year}{1999}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{23\bibrangedash 38}
       \range{pages}{16}
+      \verb{eprint}
+      \verb 2566947
+      \endverb
       \verb{urlraw}
       \verb http://www.jstor.org/stable/2566947
       \endverb
@@ -116,36 +126,53 @@
       \verb http://www.jstor.org/stable/2566947
       \endverb
     \endentry
-    \entry{moulin2014strategy}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=71a70adca4fbfe9ec3ad745b0d94b8f5}{%
+    \entry{moulinStrategySocialChoice2015}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ad4ad8929309213ad727a4f21e4d16db}{%
            family={Moulin},
            familyi={M\bibinitperiod},
-           given={Hervé},
+           given={H.},
            giveni={H\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=bbcda52c981b30af8c30960130da4f6b}{%
+           family={Bliss},
+           familyi={B\bibinitperiod},
+           given={C.\bibnamedelimi J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=297942d30eebe00e7f186864cfdbb6b1}{%
+           family={Intriligator},
+           familyi={I\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam}%
       }
       \list{publisher}{1}{%
-        {Elsevier}%
+        {Elsevier Science}%
       }
-      \strng{namehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{fullhash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{bibnamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{authorbibnamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{authornamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{authorfullhash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \field{extraname}{1}
+      \strng{namehash}{44bf2582b81c146eaa629d2b8eb6469b}
+      \strng{fullhash}{9b5dbbe2720c5ad7f84fa2afd9e8aa3e}
+      \strng{bibnamehash}{9b5dbbe2720c5ad7f84fa2afd9e8aa3e}
+      \strng{authorbibnamehash}{9b5dbbe2720c5ad7f84fa2afd9e8aa3e}
+      \strng{authornamehash}{44bf2582b81c146eaa629d2b8eb6469b}
+      \strng{authorfullhash}{9b5dbbe2720c5ad7f84fa2afd9e8aa3e}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The strategy of social choice}
-      \field{year}{2014}
+      \field{annotation}{OCLC: 1059011570}
+      \field{isbn}{978-1-4832-5688-7}
+      \field{langid}{english}
+      \field{title}{The Strategy of Social Choice}
+      \field{year}{2015}
+      \field{dateera}{ce}
     \endentry
-    \entry{brandt_handbook_2016}{book}{}
+    \entry{moulinHandbookComputationalSocial2016}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=71a70adca4fbfe9ec3ad745b0d94b8f5}{%
            family={Moulin},
@@ -193,19 +220,34 @@
       \strng{editorbibnamehash}{a5f8cb95266ecc9a863f798f83d2581d}
       \strng{editornamehash}{7f8fce5409817f6c28b9e86ff1f7b802}
       \strng{editorfullhash}{a5f8cb95266ecc9a863f798f83d2581d}
-      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{25}
       \field{edition}{1}
+      \field{isbn}{978-1-107-06043-2 978-1-107-44698-4}
+      \field{month}{4}
       \field{title}{Handbook of Computational Social Choice}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
       \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1017/CBO9781107446984
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/9781107446984/type/book
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/9781107446984/type/book
+      \endverb
     \endentry
-    \entry{pacuit_socialchoice_2022}{misc}{}
+    \entry{Pacuit}{dataset}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=5dcf144d586d1207576de237a56f8bd0}{%
            family={Pacuit},
@@ -222,16 +264,21 @@
       \strng{authorfullhash}{5dcf144d586d1207576de237a56f8bd0}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{\url{https://umd.instructure.com/courses/1331026}}
       \field{title}{New Perspectives on Social Choice}
-      \field{year}{2022}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://umd.instructure.com/courses/1331026
+      \endverb
+      \verb{url}
+      \verb https://umd.instructure.com/courses/1331026
+      \endverb
     \endentry
-    \entry{sanver_one-way_2009}{article}{}
+    \entry{sanverOnewayMonotonicityForm2009}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=e3ddee3adff69cda4189f84b00e31ecb}{%
            family={Sanver},
@@ -264,7 +311,8 @@
       \field{journaltitle}{International Journal of Game Theory}
       \field{month}{11}
       \field{number}{4}
-      \field{title}{One-way monotonicity as a form of strategy-proofness}
+      \field{shortjournal}{International Journal of Game Theory}
+      \field{title}{One-Way Monotonicity as a Form of Strategy-Proofness}
       \field{volume}{38}
       \field{year}{2009}
       \field{dateera}{ce}
@@ -280,7 +328,7 @@
       \verb https://doi.org/10.1007/s00182-009-0170-9
       \endverb
     \endentry
-    \entry{John_compound}{article}{}
+    \entry{smithAggregationPreferencesVariable1973}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4b36e754bb65ad946cf56740307a657a}{%
            family={Smith},
@@ -288,9 +336,6 @@
            given={John\bibnamedelima H.},
            giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
            givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {[Wiley, Econometric Society]}%
       }
       \strng{namehash}{4b36e754bb65ad946cf56740307a657a}
       \strng{fullhash}{4b36e754bb65ad946cf56740307a657a}
@@ -305,19 +350,36 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{jstor}
+      \field{issn}{00129682}
       \field{journaltitle}{Econometrica}
+      \field{month}{11}
       \field{number}{6}
+      \field{shortjournal}{Econometrica}
       \field{title}{Aggregation of Preferences with Variable Electorate}
       \field{urlday}{19}
       \field{urlmonth}{11}
       \field{urlyear}{2023}
       \field{volume}{41}
       \field{year}{1973}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{1027\bibrangedash 1041}
-      \range{pages}{15}
+      \field{pages}{1027}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.2307/1914033
+      \endverb
+      \verb{eprint}
+      \verb 1914033
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/1914033?origin=crossref
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/1914033?origin=crossref
+      \endverb
     \endentry
-    \entry{young_social_1975}{article}{}
+    \entry{youngSocialChoiceScoring1975}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d1013deac2004326322710ff7345fa4a}{%
            family={Young},
@@ -325,6 +387,10 @@
            given={H.\bibnamedelimi P.},
            giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod},
            givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
       }
       \strng{namehash}{d1013deac2004326322710ff7345fa4a}
       \strng{fullhash}{d1013deac2004326322710ff7345fa4a}
@@ -339,7 +405,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{SIAM} Journal on Applied Mathematics}
+      \field{eprinttype}{jstor}
+      \field{issn}{00361399}
+      \field{journaltitle}{SIAM Journal on Applied Mathematics}
       \field{number}{4}
       \field{title}{Social Choice Scoring Functions}
       \field{urlday}{19}
@@ -351,8 +419,17 @@
       \field{urldateera}{ce}
       \field{pages}{824\bibrangedash 838}
       \range{pages}{15}
+      \verb{eprint}
+      \verb 2100365
+      \endverb
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2100365
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2100365
+      \endverb
     \endentry
-    \entry{Young_1978}{article}{}
+    \entry{youngConsistentExtensionCondorcet1978}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=d1013deac2004326322710ff7345fa4a}{%
            family={Young},
@@ -384,6 +461,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{jstor}
       \field{issn}{00361399}
       \field{journaltitle}{SIAM Journal on Applied Mathematics}
       \field{number}{2}
@@ -393,9 +471,13 @@
       \field{urlyear}{2023}
       \field{volume}{35}
       \field{year}{1978}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{285\bibrangedash 300}
       \range{pages}{16}
+      \verb{eprint}
+      \verb 2100667
+      \endverb
       \verb{urlraw}
       \verb http://www.jstor.org/stable/2100667
       \endverb
@@ -405,7 +487,7 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
-    \entry{fishburn_paradoxes_1983}{article}{}
+    \entry{fishburnParadoxesPreferentialVoting1983}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=92e75abaed61a56cc025282d5bd3af6c}{%
            family={Fishburn},
@@ -420,6 +502,9 @@
            giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
       }
+      \list{publisher}{1}{%
+        {Mathematical Association of America}%
+      }
       \strng{namehash}{a55262f662c46250a78dfb7eaed886d0}
       \strng{fullhash}{a55262f662c46250a78dfb7eaed886d0}
       \strng{bibnamehash}{a55262f662c46250a78dfb7eaed886d0}
@@ -433,9 +518,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{jstor}
       \field{issn}{0025570X, 19300980}
       \field{journaltitle}{Mathematics Magazine}
-      \field{note}{Publisher: Mathematical Association of America}
       \field{number}{4}
       \field{title}{Paradoxes of Preferential Voting}
       \field{urlday}{23}
@@ -450,6 +535,9 @@
       \verb{doi}
       \verb 10.2307/2689808
       \endverb
+      \verb{eprint}
+      \verb 2689808
+      \endverb
       \verb{urlraw}
       \verb http://www.jstor.org/stable/2689808
       \endverb
@@ -457,7 +545,7 @@
       \verb http://www.jstor.org/stable/2689808
       \endverb
     \endentry
-    \entry{maskin1999}{article}{}
+    \entry{Maskin1999}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=6aba23f5d6d96846cbc023487696dec4}{%
            family={Maskin},
@@ -482,19 +570,23 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{If A is a set of social alternatives, a social choice rule (SCR) assigns a subset of A to each potential profile of individuals' preferences over A, where the subset is interpreted as the set of "welfare optima". A game form (or "mechanism") implements the social choice rule if, for any potential profile of preferences, (i) any welfare optimum can arise as a Nash equilibrium of the game form (implying, in particular, that a Nash equilibrium exists) and, (ii) all Nash equilibria are welfare optimal. The main result of this paper establishes that any SCR that satisfies two properties-monotonicity and no veto power-can be implemented by a game form if there are three or more individuals. The proof is constructive.}
+      \field{eprinttype}{jstor}
       \field{issn}{00346527, 1467937X}
       \field{journaltitle}{The Review of Economic Studies}
       \field{number}{1}
       \field{title}{Nash Equilibrium and Welfare Optimality}
-      \field{urlday}{23}
+      \field{urlday}{26}
       \field{urlmonth}{11}
       \field{urlyear}{2023}
       \field{volume}{66}
       \field{year}{1999}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{23\bibrangedash 38}
       \range{pages}{16}
+      \verb{eprint}
+      \verb 2566947
+      \endverb
       \verb{urlraw}
       \verb http://www.jstor.org/stable/2566947
       \endverb
@@ -502,36 +594,53 @@
       \verb http://www.jstor.org/stable/2566947
       \endverb
     \endentry
-    \entry{moulin2014strategy}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=71a70adca4fbfe9ec3ad745b0d94b8f5}{%
+    \entry{moulinStrategySocialChoice2015}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ad4ad8929309213ad727a4f21e4d16db}{%
            family={Moulin},
            familyi={M\bibinitperiod},
-           given={Hervé},
+           given={H.},
            giveni={H\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=bbcda52c981b30af8c30960130da4f6b}{%
+           family={Bliss},
+           familyi={B\bibinitperiod},
+           given={C.\bibnamedelimi J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=297942d30eebe00e7f186864cfdbb6b1}{%
+           family={Intriligator},
+           familyi={I\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam}%
       }
       \list{publisher}{1}{%
-        {Elsevier}%
+        {Elsevier Science}%
       }
-      \strng{namehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{fullhash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{bibnamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{authorbibnamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{authornamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \strng{authorfullhash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
-      \field{extraname}{1}
+      \strng{namehash}{44bf2582b81c146eaa629d2b8eb6469b}
+      \strng{fullhash}{9b5dbbe2720c5ad7f84fa2afd9e8aa3e}
+      \strng{bibnamehash}{9b5dbbe2720c5ad7f84fa2afd9e8aa3e}
+      \strng{authorbibnamehash}{9b5dbbe2720c5ad7f84fa2afd9e8aa3e}
+      \strng{authornamehash}{44bf2582b81c146eaa629d2b8eb6469b}
+      \strng{authorfullhash}{9b5dbbe2720c5ad7f84fa2afd9e8aa3e}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The strategy of social choice}
-      \field{year}{2014}
+      \field{annotation}{OCLC: 1059011570}
+      \field{isbn}{978-1-4832-5688-7}
+      \field{langid}{english}
+      \field{title}{The Strategy of Social Choice}
+      \field{year}{2015}
+      \field{dateera}{ce}
     \endentry
-    \entry{brandt_handbook_2016}{book}{}
+    \entry{moulinHandbookComputationalSocial2016}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=71a70adca4fbfe9ec3ad745b0d94b8f5}{%
            family={Moulin},
@@ -579,19 +688,34 @@
       \strng{editorbibnamehash}{a5f8cb95266ecc9a863f798f83d2581d}
       \strng{editornamehash}{7f8fce5409817f6c28b9e86ff1f7b802}
       \strng{editorfullhash}{a5f8cb95266ecc9a863f798f83d2581d}
-      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{25}
       \field{edition}{1}
+      \field{isbn}{978-1-107-06043-2 978-1-107-44698-4}
+      \field{month}{4}
       \field{title}{Handbook of Computational Social Choice}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
       \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1017/CBO9781107446984
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/9781107446984/type/book
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/9781107446984/type/book
+      \endverb
     \endentry
-    \entry{pacuit_socialchoice_2022}{misc}{}
+    \entry{Pacuit}{dataset}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=5dcf144d586d1207576de237a56f8bd0}{%
            family={Pacuit},
@@ -608,16 +732,21 @@
       \strng{authorfullhash}{5dcf144d586d1207576de237a56f8bd0}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{\url{https://umd.instructure.com/courses/1331026}}
       \field{title}{New Perspectives on Social Choice}
-      \field{year}{2022}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://umd.instructure.com/courses/1331026
+      \endverb
+      \verb{url}
+      \verb https://umd.instructure.com/courses/1331026
+      \endverb
     \endentry
-    \entry{sanver_one-way_2009}{article}{}
+    \entry{sanverOnewayMonotonicityForm2009}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=e3ddee3adff69cda4189f84b00e31ecb}{%
            family={Sanver},
@@ -650,7 +779,8 @@
       \field{journaltitle}{International Journal of Game Theory}
       \field{month}{11}
       \field{number}{4}
-      \field{title}{One-way monotonicity as a form of strategy-proofness}
+      \field{shortjournal}{International Journal of Game Theory}
+      \field{title}{One-Way Monotonicity as a Form of Strategy-Proofness}
       \field{volume}{38}
       \field{year}{2009}
       \field{dateera}{ce}
@@ -666,7 +796,7 @@
       \verb https://doi.org/10.1007/s00182-009-0170-9
       \endverb
     \endentry
-    \entry{John_compound}{article}{}
+    \entry{smithAggregationPreferencesVariable1973}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4b36e754bb65ad946cf56740307a657a}{%
            family={Smith},
@@ -674,9 +804,6 @@
            given={John\bibnamedelima H.},
            giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
            givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {[Wiley, Econometric Society]}%
       }
       \strng{namehash}{4b36e754bb65ad946cf56740307a657a}
       \strng{fullhash}{4b36e754bb65ad946cf56740307a657a}
@@ -691,19 +818,36 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{jstor}
+      \field{issn}{00129682}
       \field{journaltitle}{Econometrica}
+      \field{month}{11}
       \field{number}{6}
+      \field{shortjournal}{Econometrica}
       \field{title}{Aggregation of Preferences with Variable Electorate}
       \field{urlday}{19}
       \field{urlmonth}{11}
       \field{urlyear}{2023}
       \field{volume}{41}
       \field{year}{1973}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{1027\bibrangedash 1041}
-      \range{pages}{15}
+      \field{pages}{1027}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.2307/1914033
+      \endverb
+      \verb{eprint}
+      \verb 1914033
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/1914033?origin=crossref
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/1914033?origin=crossref
+      \endverb
     \endentry
-    \entry{young_social_1975}{article}{}
+    \entry{youngSocialChoiceScoring1975}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=d1013deac2004326322710ff7345fa4a}{%
            family={Young},
@@ -711,6 +855,10 @@
            given={H.\bibnamedelimi P.},
            giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod},
            givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
       }
       \strng{namehash}{d1013deac2004326322710ff7345fa4a}
       \strng{fullhash}{d1013deac2004326322710ff7345fa4a}
@@ -725,7 +873,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{SIAM} Journal on Applied Mathematics}
+      \field{eprinttype}{jstor}
+      \field{issn}{00361399}
+      \field{journaltitle}{SIAM Journal on Applied Mathematics}
       \field{number}{4}
       \field{title}{Social Choice Scoring Functions}
       \field{urlday}{19}
@@ -737,8 +887,17 @@
       \field{urldateera}{ce}
       \field{pages}{824\bibrangedash 838}
       \range{pages}{15}
+      \verb{eprint}
+      \verb 2100365
+      \endverb
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2100365
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2100365
+      \endverb
     \endentry
-    \entry{Young_1978}{article}{}
+    \entry{youngConsistentExtensionCondorcet1978}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=d1013deac2004326322710ff7345fa4a}{%
            family={Young},
@@ -770,6 +929,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprinttype}{jstor}
       \field{issn}{00361399}
       \field{journaltitle}{SIAM Journal on Applied Mathematics}
       \field{number}{2}
@@ -779,9 +939,13 @@
       \field{urlyear}{2023}
       \field{volume}{35}
       \field{year}{1978}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \field{pages}{285\bibrangedash 300}
       \range{pages}{16}
+      \verb{eprint}
+      \verb 2100667
+      \endverb
       \verb{urlraw}
       \verb http://www.jstor.org/stable/2100667
       \endverb
