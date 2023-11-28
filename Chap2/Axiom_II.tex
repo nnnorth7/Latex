@@ -132,7 +132,75 @@ Note that the definition of participation here is a typical form for fixed-elect
 \end{theorem}
 
 \begin{proof}
-
+    For Item I, see \textcite{moulinCondorcetPrincipleImplies1988}. \\
+    Before showing the counterexample, recall \cref{net}, we claim that for any profile $\profile$ and $a, b \in A$, 
+    \begin{equation}
+        \label{2.1}
+        \mbox{if } m_b < \mathit{Net}_\profile(b>a),\ \mbox{then } f(\profile) \neq a
+    \end{equation}
+    where $m_b := \text{sup}_{a \neq b} \mathit{Net}_\profile(a>b)$.\\
+    Let $f$ be an Condorcet extension and $a,b \in A$ with $m_b < \mathit{Net}_\profile(b>a)$. Suppose (toward a contradiction) that $f(\profile) = a$. Then $b \not \in f(\profile)$, which means $a >^\mu b$, hence $m_b > \mathit{Net}_\profile(a>b) > 0$. Since $\mathit{Net}_\profile(b > a) < 0$, $m_b < \mathit{Net}_\profile(b>a)$ cannot hold, contradict.\\
+    Consider a voting situation as follows\footnote{if $|A| \geq 4$, then put all other alternatives below.}:
+    $$\begin{array}{cccc}
+        3 & 3 & 5 & 4\\
+        \hline
+        a & a & d & b \\
+        d & d & b & c \\
+        c & b & c & a \\
+        b & c & a & d \\
+    \end{array}$$
+    Note that this does not have a Condorcet winner, however, using \ref{2.1}, we can get to the conclusion that $f(\profile) = a$. Now we add 4 more voters with ballot $c \succ_i a \succ_i b \succ_i d$ where $i$ is one of the 4 voters.\\
+    The new voting situation is:
+    $$\begin{array}{ccccc}
+        3 & 3 & 5 & 4 & 4\\
+        \hline
+        a & a & d & b & c\\
+        d & d & b & c & a\\
+        c & b & c & a & b\\
+        b & c & a & d & d\\
+    \end{array}$$
+    Using \ref{2.1} again, we can conclude that $f(\profile') \neq c$ and $f(\profile') \neq a$, thus $f(\profile) \succsim_i f(\profile')$, contradict.\\
+    ~\\
+    For Item II: See \textcite{sanverOnewayMonotonicityForm2009}. We use the following definition to help us complete the proof.
+    \begin{definition}
+        $f$ is \textit{weakly coalitional half-way monotonic} if whenever a set of voters having identical strict ranking $\succsim_i$ all simultaneously change their votes to $\succsim^{rev}_i$, and the effect is to switch the winner from $a$ alone to $b$ alone, it must be that $a \succsim_i b$.
+    \end{definition}
+    First we prove that \emph{half-way monotonic} implies \emph{weakly coalitional half-way monotonic}, then claim that for $|A| \geq 4$, every Condorcet extension violates weakly coalitional half-way monotonic.\\
+    It's easy to show that half-way monotonic implies weakly coalitional half-way monotonic. Suppose the set of voters $|I| = j$ and their ballot is $\succsim_i$, we can fix an enumeration $\profile = \profile_0, \profile_1, \dots, \profile_j = \profile'$, where $\profile$ is the original profile and $\profile_i$ stands for the profile with $i$ voters changing his ballot to a reversed form. Then $\profile'$ is the final profile where all of the voters in the set have changed his ballot. By half-way monotonic, $a=f(\profile) \succsim_i f(\profile_1) \succsim_i \dots \succsim_i f(\profile')=b$, hence the proposition holds.\\
+    For the second part, we fix the following conventions:
+    \begin{itemize}
+        \item $C$ denotes the profile, for $m \geq 4$ alternatives, in which each possible ranking occurs exactly once. Note that $C$ has $m!$ voters.
+        \item $k = k(\profile)$ is the maximum integer $j$ such that each of the $m!$ rankings occurs at least $j$ times in $\profile$; $k(\profile)$ stands for the ``number of copies of $C$ contained in $\profile$''.
+        \item $n^\ast = n^\ast(\profile) := |N| - (m!)k(\profile)$ is the number of voters remaining once one ignores the cpoies of $C$.
+        \item $\profile$ satisfies \emph{Condition M} if $2k(\profile) \geq n^\ast (\profile) +2$; satisfying Condition M means that $\profile$ contains ``enough'' copies of $C$ relative to the number of voters who would remain if all copies of $C$ were removed. 
+        \item The \emph{Simpson score} of an alternative $a$ for profile $\profile$ is $t^\ast (a) = \mbox{Min} \{\textit{Net}_\profile (a > x) \;|\; x \neq a\}$.
+    \end{itemize}
+    \emph{Claim} Let $f$ be a Condorcet extension satisfying weak coalitional half-way monotonic. Let $a ,b \in A$ and $\profile$ be a profile with $|A| \geq 4$ that meets the following three conditions:
+    \begin{itemize}
+        \item Condition M,
+        \item the Simpson score $t^\ast(b)$ is even and $t^\ast (b) \geq 0$, and
+        \item $\mathit{Net}(b > a) > - t^\ast (b) +2$.
+    \end{itemize}
+    Then $f$ does not elect $a$ at $\profile$.
+    \emph{Proof.} Let $a, b \in A$ be as stated. Noted that $|t^\ast (b)| \leq n$ and copies of $C$ hace no effect on the value of $t^\ast (b)$, hence we have $|t^\ast (b)| \leq n^\ast$, hence $- t^\ast (b) + 2 \leq n^\ast +2 \leq 2k$ from Condition M.\\
+    Let $r = \frac{- t^\ast (b) + 2}{2}$, which is a strictly positive integer. Choose a specific ballot $\succsim_i$ as $x_0 \succsim_i x_1 \succsim_i \dots \succsim_i b \succsim_i a$. By Condition M, there is at least $r$ voters with ballot $\succsim_i$\footnote{Why,,,?}. Now let $\profile'$ be obtained from $\profile$ via having $r$ voters with $\succsim_i$ all change their votes to $\succsim^{rev}_i$. Then we have the following changes:
+    \begin{itemize}
+        \item For all $x \in A$ with $b \neq x \neq a$, $\mathit{Net}_{\profile'}(b > x) = \mathit{Net}_{\profile'}(b > x) + 2r = \mathit{Net}_{\profile} (b>x) + (-t^\ast (b)) +2$. Since $\mathit{Net}_{\profile} (b>x) \geq \mbox{Min}\{\mathit{Net}_{\profile} (b>x)\} = t^\ast (b)$, $\mathit{Net}_{\profile'}(b > x) > 0$.
+        \item $\mathit{Net}_{\profile'}(b > a) = \mathit{Net}_{\profile}(b > a) - 2r = \mathit{Net}_{\profile} (b >a) + t^\ast (b) - 2 > 0$.
+    \end{itemize}
+    Thus $b$ is the Condorcet winner for $\profile'$ and $a$ is not. If $a$ was a winner for $\profile$, then $f$ no longer be weakly coalitional half-way monotonic. Therefore $a$ is not the Condorcet winner for $\profile$.\\
+    Now we go back to the main proof: Consider such a profile $\profile$:
+    $$\begin{array}{cccc}
+        6 & 6 & 10 & 8\\
+        \hline
+        a & a & d & b \\
+        d & d & b & c \\
+        c & b & c & a \\
+        b & c & a & d \\
+    \end{array}$$
+    In this profile, $n^\ast (\profile) = |N| = 30$. Let $\profile'$ be obtained from $\profile$ by adding 28 copies of $C$, then $n^\ast (\profile') = n^\ast (\profile) = 30$.\\
+    Using the \emph{claim} above we can show that $b,c,d$ cannot be the winner, thus $f(\profile) = a$. Now we construct a new profile $\profile''$ via having 4 voters in $\profile$ change their ballot from $\succsim_i := d \succsim_i b \succsim_i a \succsim_i c$ to $\succsim^{rev}_i$. Using the \emph{claim} again we have $a,c \not \in f(\profile)$, contradict with the fact that $f$ is weakly coalitional half-way monotonic.\\
+    Thus we can draw a conclusion that $f$ violates half-way monotonicity, since $f$ even violates the weak form of it.
 \end{proof}
 
 \begin{corollary}
@@ -176,8 +244,8 @@ It's obvious that Kemeny Rule is neutral and anonymous. For Reinforcement, since
 $$
 f(s) \cap f(t) \neq \emptyset \Rightarrow f(s+t) = f(s) \cap f(t)
 $$
-but for the situation likely to \cref{not_reinforcing}, $f_{\textit{Kem}}(s) = \{a \succ b \succ c,\; b \succ c \succ a,\; c \succ a \succ b\}$, $f_{\textit{Kem}} = \{b \succ a \succ c\}$ and $f(s) \cap f(t)$ is empty.\\
-~\\
+but for the situation likely to \cref{not_reinforcing}, $f_{\textit{Kem}}(s) = \{a \succ b \succ c,\; b \succ c \succ a,\; c \succ a \succ b\}$, $f_{\textit{Kem}} = \{b \succ a \succ c\}$ and $f(s) \cap f(t)$ is empty.
+
 \begin{theorem}[\parencite{youngConsistentExtensionCondorcet1978}]
     Among social preference functions Kemeny's rule is the unique neutral and reinforcing Condorcet extension.
 \end{theorem}

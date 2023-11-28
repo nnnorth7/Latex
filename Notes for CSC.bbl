@@ -172,6 +172,54 @@
       \field{year}{2015}
       \field{dateera}{ce}
     \endentry
+    \entry{moulinCondorcetPrincipleImplies1988}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=71a70adca4fbfe9ec3ad745b0d94b8f5}{%
+           family={Moulin},
+           familyi={M\bibinitperiod},
+           given={Hervé},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{fullhash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{bibnamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{authorbibnamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{authornamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{authorfullhash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00220531}
+      \field{journaltitle}{Journal of Economic Theory}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{1}
+      \field{shortjournal}{Journal of Economic Theory}
+      \field{title}{Condorcet's Principle Implies the No Show Paradox}
+      \field{urlday}{24}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{volume}{45}
+      \field{year}{1988}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{53\bibrangedash 64}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/0022-0531(88)90253-0
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0022053188902530
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0022053188902530
+      \endverb
+    \endentry
     \entry{moulinHandbookComputationalSocial2016}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=71a70adca4fbfe9ec3ad745b0d94b8f5}{%
@@ -220,6 +268,7 @@
       \strng{editorbibnamehash}{a5f8cb95266ecc9a863f798f83d2581d}
       \strng{editornamehash}{7f8fce5409817f6c28b9e86ff1f7b802}
       \strng{editorfullhash}{a5f8cb95266ecc9a863f798f83d2581d}
+      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
@@ -268,9 +317,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{\textbackslash url\{https://umd.instructure.com/courses/1331026\}}
       \field{title}{New Perspectives on Social Choice}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://umd.instructure.com/courses/1331026
       \endverb
@@ -640,6 +688,54 @@
       \field{year}{2015}
       \field{dateera}{ce}
     \endentry
+    \entry{moulinCondorcetPrincipleImplies1988}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=71a70adca4fbfe9ec3ad745b0d94b8f5}{%
+           family={Moulin},
+           familyi={M\bibinitperiod},
+           given={Hervé},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{fullhash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{bibnamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{authorbibnamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{authornamehash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \strng{authorfullhash}{71a70adca4fbfe9ec3ad745b0d94b8f5}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00220531}
+      \field{journaltitle}{Journal of Economic Theory}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{1}
+      \field{shortjournal}{Journal of Economic Theory}
+      \field{title}{Condorcet's Principle Implies the No Show Paradox}
+      \field{urlday}{24}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{volume}{45}
+      \field{year}{1988}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{53\bibrangedash 64}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/0022-0531(88)90253-0
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0022053188902530
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/0022053188902530
+      \endverb
+    \endentry
     \entry{moulinHandbookComputationalSocial2016}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=71a70adca4fbfe9ec3ad745b0d94b8f5}{%
@@ -688,6 +784,7 @@
       \strng{editorbibnamehash}{a5f8cb95266ecc9a863f798f83d2581d}
       \strng{editornamehash}{7f8fce5409817f6c28b9e86ff1f7b802}
       \strng{editorfullhash}{a5f8cb95266ecc9a863f798f83d2581d}
+      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
@@ -736,9 +833,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{annotation}{\textbackslash url\{https://umd.instructure.com/courses/1331026\}}
       \field{title}{New Perspectives on Social Choice}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://umd.instructure.com/courses/1331026
       \endverb
