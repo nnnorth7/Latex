@@ -1,0 +1,111 @@
+\section{Strategyproofness: Impossibilities}
+
+In this section, we go into Gibbard-Satterthwaite Theorem, which claims that Any resolute, nonimposed, and strategyproof SCF for three or more alternatives must be a dictatorship. Conversely, we can find that every resolute, nonimposed, and nondictatorial SCF for three or more alternatives is manipulable.
+
+\begin{theorem}[Gibbard-Satterthwaite Theorem]
+    \label{GSTheorem}
+    Any resolute, nonimposed, and strategyproof SCF for three or more alternatives must be a dictatorship.
+\end{theorem}
+
+Begin with the following definition:
+
+\begin{definition}
+    Let $f$ be a resolute social choice function for $m \geq 3$ alternatives, $a, b \in A$ be two distinct alternatives and $X \subseteq N$ be a set of voters. Then we say that $X$ can use $a$ to block $b$, notated $X_{a > b}$, if for every profile $\profile$ wherein each voter in $X$ ranks $a$ over $b$, $f(\profile) \neq b$; \\
+    $X$ is a \emph{dictating set} if $X_{z>w}$ holds for every choice $z \neq w$ of distinct alternatives.
+\end{definition}
+
+\begin{lemma}[Push-Down Lemma]
+    \label{push_down_lemma}
+    Let $a,b,c_1,c_2,\dots,c_{m-2}$ enumerate the $m \geq 3$ alternatives in $A$, $f$ be a resolute and down monotonic SCF for $A$, and $\profile$ be any profile with $f(\profile) = a$. Then there exists a profile $\profile^\star$ with $f (\profile^\star) = a$ such that:
+    \begin{itemize}
+        \item For every voter $i$ with $a \succ_i b$: $\succ^\star_i = a \succ b \succ c_1 \succ \dots \succ c_{m-2}$;
+        \item For every voter $i$ with $b \succ_i a$: $\succ^\star_i = b \succ a \succ c_1 \succ \dots \succ c_{m-2}$;
+    \end{itemize}
+\end{lemma}
+
+\begin{proof}
+    The proof is quite intuitive, due to $f$ being down monotonic, $\profile^\star$ can be formed just by dropping simply $c_1,\dots,c_{m-2}$ to the bottom of each ranking one by one. 
+\end{proof}
+
+\begin{lemma}
+    \label{block_set}
+    Let $f$ be a resolute and down monotonic SCF. If there exists a profile $\profile$ for which every voter in $X$ has $a$ over $b$, every voter in $N \backslash X$ has $b$ over $a$, and $f (\profile) = a$, then $X_{a>b}$.
+\end{lemma}
+
+\begin{proof}
+    Suppose (towards a contradiction) that there is a $\profile$ as stated and not $X_{a>b}$. Choose a second profile $\profile'$ s.t. each voter in $X$ rank $a$ above $b$ and $f(\profile') = b$. If any $\profile'$ voters in $N \backslash X$ have $a$ over $b$, then let them one-at-a-time drop $a$ simply below $b$ to get another new profile $\profile''$. Due to $f$ being down monotonic, $f(\profile'') = b$.
+    Applying \cref{push_down_lemma} to both $\profile$ and $\profile''$, we get $\profile^\star$ with $f(\profile^\star) = a$ and $\profile''^\star$ with $f(\profile''^\star) = b$. However, $\profile^\star = \profile''^\star$, contradict.
+\end{proof}
+
+\begin{lemma}
+    \label{disjoint_sets}
+    Let $f$ be a resolute, Pareto, and down monotonic SCF for three or more alternatives. Assume $X_{a>b}$, with $X = Y \cup Z$ split into disjoint subsets $Y$ and $Z$. Let $c$ be any alternative distinct from $a$ and $b$. Then $Y_{a>c}$ or $Z_{c>b}$.
+\end{lemma}
+
+\begin{proof}
+    Consider a profile below:
+    $$
+    \begin{array}{ccc}
+        Y & Z & N \backslash X\\
+        \hline
+        a & c & b\\
+        b & a & c\\
+        c & b & a\\
+        \vdots & \vdots & \vdots
+    \end{array}
+    $$
+    Since $f$ is Pareto, $f(\profile) \in \{a,b,c\}$. According to the assumption that $X_{a>b}$, $f(\profile) \neq b$. If $f(\profile) = a$, then by \cref{block_set}, $Y_{a>c}$. Otherwise, $Z_{c>b}$.
+\end{proof}
+
+\begin{lemma}
+    \label{X_itself}
+    Let $f$ be a resolute, Pareto, and down monotonic SCF for three or more alternatives. Assume $X_{a>b}$.Let $c$ be any alternative distinct from $a$ and $b$. Then (i) $X_{a>c}$ and (ii) $X_{c>b}$.
+\end{lemma}
+
+\begin{proof}
+    Noted that none of conditions in \cref{disjoint_sets} rules out the possibilities of $Y$ or $Z$ being empty. And Pareto implies that $\emptyset_{z>w}$ is impossible. Thus let $X = Y$ and $Z = \emptyset$ in last proof, then we have $X_{a>c}$. Analogously let $Y = \emptyset$, then $X_{c>b}$.
+\end{proof}
+
+\begin{lemma}
+    \label{dictating_set}
+    Let $f$ be a resolute, Pareto, and down monotonic SCF for three or more alternatives. Assume $X_{a>b}$. Then $X$ is a dictating set.
+\end{lemma}
+
+\begin{proof}
+    Let $a,b,y\in A$ and $X_{a>b}$ hold. We show that $X_{y>z}$ holds for every $z \neq y$. Consider several cases below:
+    \begin{itemize}
+        \item[\textit{Case 1:}] $y = a$. By \cref{X_itself} (i), we already have for all $z$ distinct from $a$, $X_{a>z}$.
+        \item[\textit{Case 2:}] $y \not \in \{a,b\}$. By \cref{X_itself}, $X_{y>b}$. Applying \cref{X_itself} to $X_{y>b}$ again, we then have for every $z$ dsitinct from $y$ and $b$, $X_{y>z}$.
+        \item[\textit{Case 3:}] $y = b$. First $X_{a>c}$ holds for $c$ distinct from $a$ and $y$. Then $X_{y>c}$ since $y$ is distinct from $a$ and $c$. Finally we get $X_{y>z}$ from all $z \neq b$.
+    \end{itemize}
+\end{proof}
+
+\begin{lemma}[Splitting Lemma]
+    \label{splitting_lemma}
+    Let $f$ be a resolute, Pareto, and down monotonic SCF for three or more alternatives. If a dictating set $X = Y \cup Z$ is split into disjoint subsets $Y$ and $Z$, then either $Y$ is a dictating set, or $Z$ is.
+\end{lemma}
+
+\begin{proof}
+    Since $X_{a>b}$, by \cref{disjoint_sets}, either $Y_{a>c}$ or $Z_{c>b}$. Using \cref{dictating_set}, either $Y$ is a dictating set of $Z$ is.
+\end{proof}
+
+\begin{lemma}[Adjustment Lemma]
+    \label{Adjustment_lemma}
+    Let $f$ be any resolute, nonimposed SCF (but no longer assume $f$ is Pareto). If $f$ is down monotonic then it is Pareto.
+\end{lemma}
+
+\begin{proof}
+    Suppose ($\lightning$) that $f$ is not Pareto, i.e. there is a profile $\profile$ s.t. every voter ranks $b$ over $a$ while $f(\profile) = a$. Choose a second profile $\profile'$ with $f(\profile') = b$. Due to $f$ being nonimposed, such a profile nust exist. Now if any voter in $\profile'$ ranks $a$ over $b$, then let him one-at-a-time drop $a$ simply below $b$. By down monotonicity, the resulting profile $\profile''$ satisfies $f(\profile'') = b$. Applying \cref{push_down_lemma} to $\profile$ and $\profile''$ to obtain $\profile^\star$ and $\profile''^\star$ with $\profile^\star = \profile''^\star$, while $f(\profile^\star) = a$ and $f(\profile''^\star) = b$
+\end{proof}
+
+\begin{proof}[for Gibbard-Satterthwaite Theorem]
+    Let $f$ be an SCF satisfying resolute, nonimposed, and strategyproof. Recall \cref{monotonicitys}, $f$ is down monotonic as well. Applying \cref{Adjustment_lemma} we know $f$ is Pareto, thus $N$ itself is a dictating set. Using \cref{splitting_lemma} repeatedly until a singleton has been left, then by \cref{X_itself} and \cref{dictating_set} the singleton is a dictating set.
+\end{proof}
+
+There is also a well known variant reformulating \cref{GSTheorem} in terms of monotonicity.
+
+\begin{theorem}
+    Any resolute, nonimposed, and Maskin monotonic SCF for three or more alternatives must be a dictatorship.
+\end{theorem}
+
+The proof is easy, since Maskin monotonicity implies down monotonicity (\cref{monotonicitys}).
