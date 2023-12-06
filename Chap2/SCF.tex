@@ -20,7 +20,7 @@ A multicandidate voting with ranked ballots is as follows:
 \begin{itemize}
     \item $N = \{1,2, \dots, n\}$ is a finite set of voters.
     \item $A = \{1,2, \dots, m\}$ is a finite set of alternatives, with $m \geq 2$.
-    \item A linear ordering $\succsim_i$ of $A$ stands for the ballot cast by voter $i$: $\succsim_i$ is transitive, complete and antisymmetric; $x \succ y$ is a shortwrite for $x \succsim y$ holds and $y \succsim x$ fails.
+    \item A linear ordering $\succsim_i$ of $A$ stands for the ballot cast by voter $i$: $\succsim_i$ is transitive, complete and antisymmetric; $x \succ y$ is a shorthand for $x \succsim y \land y \not \succsim x$.
     \item $\linearor$ denotes the set of all linear orderings for $A$.
     \item A profile $\profile = (\succsim_1,\succsim_2,\dots,\succsim_n) \in \linearor^n $ is a collection of each voter's ballot.
     \item $\linearor^{<\infty}$ stands for $\bigcup_{n \in \N} \linearor^n$
