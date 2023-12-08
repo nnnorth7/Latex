@@ -1,4 +1,4 @@
-\section{Strategyproofness: Impossibilities}
+\section{Strategyproofness: Impossibilities}\label{straproof_imp}
 
 In this section, we go into Gibbard-Satterthwaite Theorem, which claims that Any resolute, nonimposed, and strategyproof SCF for three or more alternatives must be a dictatorship. Conversely, we can find that every resolute, nonimposed, and nondictatorial SCF for three or more alternatives is manipulable.
 
@@ -108,4 +108,53 @@ There is also a well known variant reformulating \cref{GSTheorem} in terms of mo
     Any resolute, nonimposed, and Maskin monotonic SCF for three or more alternatives must be a dictatorship.
 \end{theorem}
 
-The proof is easy, since Maskin monotonicity implies down monotonicity (\cref{monotonicitys}).
+The proof is easy, since Maskin monotonicity implies down monotonicity (\cref{monotonicitys}).\\
+~\\
+Gibbard-Satterthwaite Theorem seems to give us a negative result, indicating that many voting rules are manipulable. Nevertheless, we should also note that there are manifold limitations inside it.
+
+\begin{enumerate}
+    \item It's nearly impossible to achieve a fulfillment of all conditions for single voter manipulation, since if one want to manipulate, at least she has to have access to other's ballot and make sure anyone except her won't manipulate.
+    \item The theorem applies only to the social choice function context, with its associated form of ballot---ordinal rankings of the alternatives---and of election outcome. For example, \textit{Social Decision Schemes} escape the Gibbard-Satterthwaite context at the other end---the output---by declaring a probability distribution as the election outcome.
+    \item The theorem only applied to \emph{resolute} SCFs. However, in \cref{nonresolute} we have known, in the case of a neutral and anonymous SCF $f$ , ties are often inevitable, suggesting that the theorem might say little about the rules that are of greatest interest.
+\end{enumerate}
+
+Now we turn to another significant question, asking that \emph{How many tied outcomes must we be willing to live with, in order to achieve strategyproofness?} Several generalizations of Gibbard-Satterthwaite to irresolute SCFs suggest an answer: \emph{a lot of ties}. To prove it, we first fix some conventions:
+
+\begin{definition}
+    \begin{itemize}
+        \item For $Z \subseteq A$, let $\mbox{max}_{\succ_i}[Z]$ denote $i$'s top ranked alternative in $Z$ and $\mbox{min}_{succ_i}[Z]$ similarly.
+        \item Let $f$ be an SCF, possibly irresolute. We say $f$ is \emph{manipulable by optimists} if for some pair $\profile,\profile'$ of profiles and voter $i$ with $\succsim'_j = succsim_j$ for all $j \neq i$, $\mbox{max}_{\succ_i} [f(\profile')] \; \succ_i \; \mbox{max}_{\succ_i} [f(\profile)]$.
+        \item $f$ is \emph{manipulable by pessimists} if for some pair $\profile,\profile'$ of profiles and voter $i$ with $\succsim'_j = succsim_j$ for all $j \neq i$, $\mbox{min}_{\succ_i} [f(\profile')] \; \succ_i \; \mbox{min}_{\succ_i} [f(\profile)]$.
+        \item A voter $k$ is a nominator for $f$ if for every profile $\profile$, $k$'s top-ranked alternative is a member of $f(\profile)$.
+        \item The \emph{Omninominator} SCF returns, for each profile $\profile$, the set $\textit{OmNom}(\profile)$ of all alternatives that have been top-ranked by at least one voter.
+    \end{itemize}
+\end{definition}
+
+The intuition here is that some outside agency will ultimately choose a single winning alternative from the set $f(\profile)$. An ``optimist'' assumes that the chosen $x$ will always be his favorite alternative from $f(\profile)$, hence preferring one set $Z$ of winners to another $Z'$ when $\mbox{max}_{\succ_i}[Z] \succ_i \mbox{max}_{\succ_i}[Z']$. A nominator is a sort of weak dictator. It is easy to check that the Omninominator rule is not manipulable by optimists or by pessimists. This rule is notably irresolute, but it seems that every other example is even worse:
+
+\begin{theorem}[\parencite{Duggan2000}]
+    \label{nominator}
+    If a nonimposed SCF $f$ for three or more alternatives is not manipulable by optimists and is not manipulable by pessimists, then $f$ must have a nominator.
+\end{theorem}
+
+Thus, if $f$ is anonymous, every voter must be a nominator, whence:
+
+\begin{corollary}[Corollary to \cref{nominator}]
+    If an anonymous, nonimposed SCF $f$ for three or more alternatives is not manipulable by optimists and is not manipulable by pessimists, then $f (\profile) \supseteq \textit{OmNom}(\profile)$ for every profile $\profile$.
+\end{corollary}
+
+Thus, for an anonymous SCF to be strategyproof (in the \cref{nominator} sense) it must have at least as many ties as Omninominator. Moreover, Duggan and Schwartz also show that by requiring $f$ to be minimally more resolute than Omninominator the conclusion of \cref{nominator} can be strengthened to ``$f$ must have a dictator''.\\
+~\\
+Now we turn back to the proof of \cref{ThCK} in \cref{voting_rules_I}, showing that for functions restricted to the Condorcet domain, no SCF other than Pairwise Majority Rule is resolute, anonymous, neutral, and strategyproof.
+
+\begin{proof}
+    \label{second_part_ThCK}
+    Let $f:\; \condom \to A$ be resolute, anonymous, neutral and strategyproof, hence down monotonic. If $f \neq \mbox{PMR}$, choose a profile $\profile \in \condom$ with Condorcet winner $b$ s.t. $f(\profile) = a \neq b$. Applying \cref{push_down_lemma} to obtain a profile $\profile^\star$ with $f(\profile^\star) = a$ s.t. 
+    \begin{itemize}
+        \item for each voter $i$ with $a \succ_i b$, $\succ^\star_i = a \succ b \succ c_1 \succ \dots \succ c_{m-2}$, and
+        \item for each voter $i$ with $b \succ_i a$, $\succ^\star_i = b \succ a \succ c_1 \succ \dots \succ c_{m-2}$.
+    \end{itemize}
+    Noted that $\profile^\star$ remains within $\condom$, since $|N|$ is odd. Since $b$ is the Condorcet winner, there are more voters having $b \succ^\star_i a$ than having $a \succ^\star_i b$. One ballot at a time, drop $b$ simply below $a$ on enough ballots to reverse those numbers. As $n$ is odd, the evolving profile remains within $\condom$. monotonicity implies $a$ still wins, but neutrality and Anonymity say $b$ wins.
+\end{proof}
+
+\section{Strategyproofness: Possibilities}

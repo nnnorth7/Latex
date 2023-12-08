@@ -56,7 +56,7 @@ The voting rules mentioned above (Plurality, Copeland and Borda) are anonymous, 
     \item Ignore or suppress the issue (assume no ties exist).
 \end{enumerate}
 
-\section{Voting Rules I: Condorcet Extensions, Scoring Rules, and Run-Offs}
+\section{Voting Rules I: Condorcet Extensions, Scoring Rules, and Run-Offs}\label{voting_rules_I}
 
 Introduce two axioms here:\\
 
@@ -107,7 +107,7 @@ If we restrict $f$'s domain to $\condom$, then \cref{ThCK} can be seen as “May
 
 \begin{proof}
     Clearly, restricted to $\condom$, PMR is resolute, anonymous and neutral. For strategyproof, conside a voter $i$ with the sincere ballot being $y \succ_i x$ for alternatives $x,y$, and the Condorcet winner is $x$. Then however $i$ changes his ballot, $x$ remains to be the winner.\\
-    For uniqueness\dots
+    For uniqueness, we left it to \cref{second_part_ThCK} in \cref{straproof_imp}.
 \end{proof}
 
 Note that Condorcet extension isn't necessary when choosing a voting rule. Borda is not a Condorcet extension actually, consider a profile $\profile$ with $|N| = 5$ and $A = \{a,b,c\}$, if three voters rank $a \succ b \succ c$ and two rank $b \succ c \succ a$\dots. And Copeland rule is a Condorcet extension.
