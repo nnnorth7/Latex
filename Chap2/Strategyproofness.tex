@@ -99,6 +99,7 @@ Begin with the following definition:
 \end{proof}
 
 \begin{proof}[for Gibbard-Satterthwaite Theorem]
+    ~\\
     Let $f$ be an SCF satisfying resolute, nonimposed, and strategyproof. Recall \cref{monotonicitys}, $f$ is down monotonic as well. Applying \cref{Adjustment_lemma} we know $f$ is Pareto, thus $N$ itself is a dictating set. Using \cref{splitting_lemma} repeatedly until a singleton has been left, then by \cref{X_itself} and \cref{dictating_set} the singleton is a dictating set.
 \end{proof}
 
@@ -124,7 +125,7 @@ Now we turn to another significant question, asking that \emph{How many tied out
     \begin{itemize}
         \item For $Z \subseteq A$, let $\mbox{max}_{\succ_i}[Z]$ denote $i$'s top ranked alternative in $Z$ and $\mbox{min}_{succ_i}[Z]$ similarly.
         \item Let $f$ be an SCF, possibly irresolute. We say $f$ is \emph{manipulable by optimists} if for some pair $\profile,\profile'$ of profiles and voter $i$ with $\succsim'_j = succsim_j$ for all $j \neq i$, $\mbox{max}_{\succ_i} [f(\profile')] \; \succ_i \; \mbox{max}_{\succ_i} [f(\profile)]$.
-        \item $f$ is \emph{manipulable by pessimists} if for some pair $\profile,\profile'$ of profiles and voter $i$ with $\succsim'_j = succsim_j$ for all $j \neq i$, $\mbox{min}_{\succ_i} [f(\profile')] \; \succ_i \; \mbox{min}_{\succ_i} [f(\profile)]$.
+        \item $f$ is \emph{manipulable by pessimists} if for some pair $\profile,\profile'$ of profiles and voter $i$ with $\succsim'_j = \succsim_j$ for all $j \neq i$, $\mbox{min}_{\succ_i} [f(\profile')] \; \succ_i \; \mbox{min}_{\succ_i} [f(\profile)]$.
         \item A voter $k$ is a nominator for $f$ if for every profile $\profile$, $k$'s top-ranked alternative is a member of $f(\profile)$.
         \item The \emph{Omninominator} SCF returns, for each profile $\profile$, the set $\textit{OmNom}(\profile)$ of all alternatives that have been top-ranked by at least one voter.
     \end{itemize}
@@ -149,7 +150,7 @@ Now we turn back to the proof of \cref{ThCK} in \cref{voting_rules_I}, showing t
 
 \begin{proof}
     \label{second_part_ThCK}
-    Let $f:\; \condom \to A$ be resolute, anonymous, neutral and strategyproof, hence down monotonic. If $f \neq \mbox{PMR}$, choose a profile $\profile \in \condom$ with Condorcet winner $b$ s.t. $f(\profile) = a \neq b$. Applying \cref{push_down_lemma} to obtain a profile $\profile^\star$ with $f(\profile^\star) = a$ s.t. 
+    Let $f: \condom \to A$ be resolute, anonymous, neutral and strategyproof, hence down monotonic. If $f \neq \mbox{PMR}$, choose a profile $\profile \in \condom$ with Condorcet winner $b$ s.t. $f(\profile) = a \neq b$. Applying \cref{push_down_lemma} to obtain a profile $\profile^\star$ with $f(\profile^\star) = a$ s.t. 
     \begin{itemize}
         \item for each voter $i$ with $a \succ_i b$, $\succ^\star_i = a \succ b \succ c_1 \succ \dots \succ c_{m-2}$, and
         \item for each voter $i$ with $b \succ_i a$, $\succ^\star_i = b \succ a \succ c_1 \succ \dots \succ c_{m-2}$.
@@ -158,3 +159,32 @@ Now we turn back to the proof of \cref{ThCK} in \cref{voting_rules_I}, showing t
 \end{proof}
 
 \section{Strategyproofness: Possibilities}
+
+\begin{definition}
+    \begin{itemize}
+        \item Let $d_i$ denote $\succsim_i$'s maximal alternative of \emph{ideal point}, i.e. $d_i \succ_i d' \succ_i d''$ for all $d'$ and $d''$ s.t. $d_i > d' >d''$ or $d_i <d'<d''$, where $>$ is a linear order on $A$.
+        \item A ballot $\succsim_i$ is \emph{single peaked with respect to} $>$ if $i$'s top-ranked alternative is an ideal point.
+        \item A profile $\profile$ is \emph{single peaked} if there exists a common linear order $>$ on $A$ such that every ballot of $\profile$ is single-peaked with respect to $>$.
+        \item The \emph{single-peaked domain} is the set of all single peaked profiles (for a given $A$ and $N$), and \emph{the median rule} is the restricted domain SCF that selects the median of voters' ideal points, for each profile in this domain.
+    \end{itemize}
+\end{definition}
+
+For reasonableness of the median rule, see \textcite{Black1987}.
+
+\begin{theorem}[Black's Theorem]
+    Every single-peaked profile $\profile$ yields a transitive pairwise majority preference relation $\geqslant^\mu$. In particular, if $n$ is odd then $\profile \in \condom$, and the median of the ideal points coincides with $\profile$'s Condorcet winner. For odd $n$, the median rule is strategyproof on the single-peaked domain.
+\end{theorem}
+
+The \emph{domain restriction} here is quite different from Condorcet extension, as we have restricted individual rankings that voters can choose freely. The phrase ``domain restriction'' is sometimes used to refer exclusively to such restrictions on rankings.
+
+\begin{definition}
+    A set $S \subseteq \linearor$ of rankings satisfies \emph{value restriction} if for every set $X \subseteq A$ of three alternatives there exists an $x \in X$ such that no ranking in $S$ ranks $x$ third among members of $X$, or none ranks $x$ second, or none ranks $x$ first.
+\end{definition}
+
+\begin{theorem}[Sen's Possibility Theorem]
+    Let $S \subseteq \linearor$ be a set of rankings of $A$. Then $S$ is value restricted if and only if $>^\mu$ is transitive for every profile of ballots from $S$ having an odd number of voters.
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
