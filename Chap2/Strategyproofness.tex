@@ -186,5 +186,30 @@ The \emph{domain restriction} here is quite different from Condorcet extension, 
 \end{theorem}
 
 \begin{proof}
-    
+    `\emph{Only If}' part: Assume that profile $\profile$ has an odd number $n$ of voters casting ballots from the value restricted set $S$. It suffices to show for an arbitraty set $X = \{a,b,c\}$ of three alternatives that the restriction $>^\mu_{|X}$ of the pairwise majority preference to $X$ is transitive. By value restriction, one of the three---let's say $a$, w.l.o.g.---is excluded from one of the three positions.\\
+    If the cases were $a >^mu b$ and $a >^\mu c$ or $b >^mu a$ and $c >^\mu a$, then clearly $>^\mu_{|X}$ is transitive. W.o.l.g. assume $c >^\mu a >^\mu b$. If $a$ is excluded from first among members of $X$, then each voter $i$ in the majority having $a \succ_i b$ agrees that $c \succ_i a \succ_i b$, which coincides with $>^\mu_{|X}$, thus is transitive. If $a$ is excluded from last among members of $X$, then similarly we have the majority agree with $c \succ_i a \succ_i b$, thus also transitive. Finally, with $c >^\mu a >^\mu b$ it is impossible to exclude a from the middle position among $X$'s members, because the majorities with $c \succ_i a$ and with $a \succ_i b$ must have a voter in common.\\
+    `\emph{If}' part: Suppose ($\lightning$) that $S$ is not value restricted, choose a set $X = \{a, b, c\} \subseteq A$ s.t. for each $x \in X$ there are elements $\succ^1_x$, $\succ^2_x$, and $\succ^3_x$ of $S$ whose restrictions to $X$ rank $x$ first, second, and third respectively. A table can be used to show that S's restrictions to $X$ are forced to include all three from the set $C_1 ={a \succ b \succ c, c \succ a \succ b, b \succ c \succ a}$ or all three from $C_2 ={a \succ c \succ b, b \succ a \succ c, c \succ b \succ a}$. Any profile of three rankings from $S$ having $C_1$ (or $C_2$) as their restrictions yields a majority cycle.
 \end{proof}
+
+\section{Approval Voting}
+
+\begin{definition}
+    \begin{itemize}
+        \item An \emph{approval ballot} is a subset $X$ of the set $A$ of alternatives where voter $i$ “approves” of exactly those alternatives $x \in X_i$.
+        \item Given a profile of approval ballots, the \emph{approval score} of an alternative $x$ is the number of voters who approve of $x$.
+        \item The \emph{approval voting} declares the winner(s) to be the alternative(s) with highest approval score.
+    \end{itemize}
+\end{definition}
+
+Though not being an SCF initially, we can translate the approval voting into an SCF form:
+
+\begin{definition}
+    \begin{itemize}
+        \item For any voter $i$ and $a,b \in A$, $a \succsim_i b$ iff $a \in X_i$ or $b \not \in X_i$. 
+        \item An \emph{indifference class} is an equivalence class under the indifference relation $\sim_i$, defined on the set $A$ of alternatives by $x \sim_i y$ if both $x \succsim_i y$ and $y \succsim_i x$.
+    \end{itemize}
+\end{definition}
+
+This identifies approval voting with a certain SCF, for which the domain is restricted to the class $\mathcal{R}_2$ of dichotomous preferences, where ballots in $\mathcal{R}_2$ are weak rankings having exactly two (nonempty) indifference classes, one ranked over the other. 
+
+For SCFs identical to approval rule, in simple terms, Approval = Borda = Condorcet. For more details, see the final part of section 2.10 in \textcite{moulinHandbookComputationalSocial2016}.
