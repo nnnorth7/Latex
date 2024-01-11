@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt,oneside]{book}
+\documentclass[a4paper,12pt,oneside]{book}
 
 \usepackage{ReadingNote}
 
@@ -17,13 +17,15 @@
 \usetikzlibrary{arrows,positioning, graphs} % for drawing arrows in diagrams
 
 %% biblatex
-
 \usepackage[backend=biber,style=apa]{biblatex}
 \addbibresource{social_choice.bib}
 
-%% denotions
+%%%%%%Universal Macros%%%%%%%%
 
-\newcommand{\weakor}{\mathcal{R}(A)}
+
+
+%%%%%%Particular Macros%%%%%%%
+\newcommand{\weakor}{\mathcal{R}(A)} 
 \newcommand{\linearor}{\mathcal{L}(A)}
 \newcommand{\profile}{\mathbf{P}}
 \newcommand{\N}{\mathbb{N}}
@@ -34,10 +36,9 @@
 
 
 
-\title{Reading Notes for\\
-Handbook of Computational Social Choice}
+\title{Notes for Social Choice}
 \author{Stupid Icey}
-\date{}
+\date{\today}
 
 
 \begin{document}
@@ -50,9 +51,9 @@ Handbook of Computational Social Choice}
 A fucking stupid reading note of \textit{Handbook of Computational Social Choice} \parencite{moulinHandbookComputationalSocial2016} for fucking stupid me, and a lot of thanks to Eric Pacuit, a great teacher whose slides and handouts about Social Choice even makes me feel more stupid!
 
 
-
 \tableofcontents
 
+\part{Backgrounds and Preliminaries}
 %% Chap1
 \include{Chap1_introCSC/Arrow's_Theorem}
 %% Chap2
@@ -61,6 +62,9 @@ A fucking stupid reading note of \textit{Handbook of Computational Social Choice
 \include{Chap2/Axiom_II}
 \include{Chap2/Strategyproofness}
 
+
+\part{Split Cycles}
+\include{Split Cycle/eee}
 
 
 

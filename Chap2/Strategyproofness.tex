@@ -72,7 +72,7 @@ Begin with the following definition:
 \end{lemma}
 
 \begin{proof}
-    Let $a,b,y\in A$ and $X_{a>b}$ hold. We show that $X_{y>z}$ holds for every $z \neq y$. Consider several cases below:
+    Let $a,b,y\in A$ and $X_{a>b}$ hold. We show that $X_{y>z}$ holds for every $z \neq y$. Consider the following cases:
     \begin{itemize}
         \item[\textit{Case 1:}] $y = a$. By \cref{X_itself} (i), we already have for all $z$ distinct from $a$, $X_{a>z}$.
         \item[\textit{Case 2:}] $y \not \in \{a,b\}$. By \cref{X_itself}, $X_{y>b}$. Applying \cref{X_itself} to $X_{y>b}$ again, we then have for every $z$ dsitinct from $y$ and $b$, $X_{y>z}$.
@@ -98,8 +98,8 @@ Begin with the following definition:
     Suppose ($\lightning$) that $f$ is not Pareto, i.e. there is a profile $\profile$ s.t. every voter ranks $b$ over $a$ while $f(\profile) = a$. Choose a second profile $\profile'$ with $f(\profile') = b$. Due to $f$ being nonimposed, such a profile nust exist. Now if any voter in $\profile'$ ranks $a$ over $b$, then let him one-at-a-time drop $a$ simply below $b$. By down monotonicity, the resulting profile $\profile''$ satisfies $f(\profile'') = b$. Applying \cref{push_down_lemma} to $\profile$ and $\profile''$ to obtain $\profile^\star$ and $\profile''^\star$ with $\profile^\star = \profile''^\star$, while $f(\profile^\star) = a$ and $f(\profile''^\star) = b$
 \end{proof}
 
-\begin{proof}[for Gibbard-Satterthwaite Theorem]
-    ~\\
+\begin{proof}
+    for Gibbard-Satterthwaite Theorem\\
     Let $f$ be an SCF satisfying resolute, nonimposed, and strategyproof. Recall \cref{monotonicitys}, $f$ is down monotonic as well. Applying \cref{Adjustment_lemma} we know $f$ is Pareto, thus $N$ itself is a dictating set. Using \cref{splitting_lemma} repeatedly until a singleton has been left, then by \cref{X_itself} and \cref{dictating_set} the singleton is a dictating set.
 \end{proof}
 

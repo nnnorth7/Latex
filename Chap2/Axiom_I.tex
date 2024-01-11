@@ -83,9 +83,10 @@ Now we concentrate on the \textit{Majority rule}, which suits for the case when 
 There's another rule which is considered deserving:
 
 \begin{definition}[Condorcet winner]
-    A \textit{Condorcet winner} for a profile $\profile$ is an alternative $x$ that defeats every other alternative in the strict pairwise majority sense: $x >^\mu_\profile y$ for all $y \neq x$\footnote{The weak version is $x \geq^\mu_\profile y$ for all $y \neq x$}.\\
+    A \textit{Condorcet winner} for a profile $\profile$ is an alternative $x$ that defeats every other alternative in the strict pairwise majority sense: $x >^\mu_\profile y$ for all $y \neq x$\footnotemark.\\
     \textit{Pairwise Majority Rule (PMR)} declares the winning alternative to be the Condorcet winner, and is undefined when a profile has no Condorcet winner.
 \end{definition}
+\footnotetext{The weak version is $x \geq^\mu_\profile y$ for all $y \neq x$.}
 
 Whenever a Condorcet winner exists, it must be unique. But with $|A| \geq 3$, it might forms \textit{majority cycles} which rule them out, then no PMR winner exists. The majority cycle is known as \textit{Condorcet's voting paradox}, which reminds us that $>^\mu$ is intranstive.
 
