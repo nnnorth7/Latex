@@ -1,0 +1,10 @@
+\chapter{``Trivial'' Proofs}
+
+\begin{lemma}
+    Let $F$ be a voting method. Then (i) if $F$ is Condorcet consistent, $\profile \in dom(F)$ with $|X(\profile)| > 1$, and $c$ is a Condorcet winner in $\profile$, then $c$ is the unique Condorcetian candidate for $F$ in $\profile$; and (ii) if for any $\profile \in dom(F)$ with a unique Condorcetian candidate $c$, $F(\profile) = \{c\}$, then $F$ is Condorcet consistent.
+\end{lemma}
+
+\begin{proof}
+    Proof for part (i) is omitted.\\
+    For part (ii), we use induction on the number of $X(\profile)$ to prove it. Suppose $c$ is a Condorcet winner in $\profile$. If $|X(\profile)| = 1$, then $F(\profile) = \{c\}$. If $|X(\profile)| > 1$, w.l.o.g. assume $|X(\profile)| = n+1$ and for $|X(\profile)| \leq n$, $F$ is Condorcet consistent. Then there is some $b \in X(\profile)$ s.t. $\Margin_\profile(c,b) > 0$ and $c$ is a Condorcet winner in $\profile_{-b}$. Hence by assumption $c \in F(\profile_{-b})$ and $c$ is a Condorcetian candidate. Noted that $c$ is unique. For any $b \in X(\profile)$ and $b \neq c$, $b$ cannot be a Condorcet winner in any $\profile_{-a}$ where $a \in X(\profile)$ and $\Margin_\profile(b,a) > 0$ since $c$ will never be deleted. Hence $b \not \in F(\profile_{-a})$ and $c$ is unique Condorcetian candidate. By assumption $F(\profile) = \{c\}$ holds and $F$ is Condorcet consistent. 
+\end{proof}
