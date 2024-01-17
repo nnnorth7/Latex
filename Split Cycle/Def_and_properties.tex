@@ -2,12 +2,73 @@
 
 Here I'll put a collection of basic definitons and properties required in the article. In the next chapter, I'll complete the details of some specific proofs in the article.
 
-\section{Basic Definition}
+\section{Definitions}
 
-\subsection{Profile}
+\begin{definition}[Basic definition]
+    \begin{itemize}
+        \item $\mathcal{V}$ and $\mathcal{X}$ are infinite sets of \emph{voters} and \emph{candidates}. $V$ and $X$ are finite subsets of them respectively.
+        \item $\mathcal{B}(X)$ is the set of all asymmetric binary relations on $X$.
+        \item A \emph{profile} is a pair $(\profile, X(\profile))$ where $\profile:\; V(\profile) \to \mathcal{B}(X(\profile))$ for some nonempty finite $X(\profile) \subseteq \mathcal{X}$ and nonempty finite $V (\profile) \subseteq \mathcal{V}$. We conflate the profile with the function $\profile$. $X(\profile)$ and $V (\profile)$ the sets of candidates in $\profile$ and voters in $\profile$, respectively. We call $\profile(i)$ voter $i$'s ballot, and we write `$x\profile_iy$' for $(x, y) \in \profile(i)$.
+        \item Different types of \emph{profiles}:
+        \begin{enumerate}
+            \item $\mathscr{P}$: the class of all profiles;
+            \item $\mathscr{A}$: the class of \emph{acyclic profiles}, in which each voter's ballot is \emph{acyclic}, meaning that there are no $x_1, \dots, x_n \in X(\profile)$ with $n > 1$ s.t. for $k \in \{1,\dots,n-1\}$, we have $x_k \profile_i x_{k+1}$ and $x_n = x_1$;
+            \item $\mathscr{I}$: the class of \emph{strict weak order profiles}, which means every voter's ballot is asymmetric and negatively transitive;
+            \item $\mathscr{L}$: the class of \emph{linear profiles} (transitive and total).
+        \end{enumerate}
+        \item A \emph{margin graph} is a weighted directed graph $\mathcal{M}$ with positive integer weights whose edge relation is asymmetric. We say $\mathcal{M}$ has \emph{uniform parity} if all weights of edges are even or all weights of edges are odd, and if there are two nodes with no edge between them, then all weights are even.
+        \item Let $\profile$ be a profile and $a,b \in X(\profile)$. Then 
+        \[\Margin_\profile (a,b) = |\{i \in V(\profile)\;|\; a \profile_i b\}| - |\{i \in V(\profile)\;|\; b \profile_i a\}|\]
+        \item Given a set $\mathscr{D}$ of profiles, a voting method on $\mathscr{D}$ is a function $F$ such that for all profiles $\profile \in \mathscr{D}$, we have $\emptyset \neq F(\profile) \subseteq X(\profile)$. We call $F(\profile)$ the set of winners or winning set for $\profile$ under $F$ . We write $dom(F )$ for the set $\mathscr{D}$ on which $F$ is defined.
+    \end{itemize}
+\end{definition}
+
+\begin{remark}
+    Here we take asymmetry as a foundational property for ballot. But others may regard reflexivity as basis, see \textcite{Heitzig2002}.
+\end{remark}
+
+\begin{definition}[Split Cycle]
+    \begin{itemize}
+        \item A cycle is a \emph{simple cycle} if for all distinct $i,j \in \{1,\dots,n\}$, $x_i = x_j$ only if $i,j \in \{1,n\}$ (i.e. all nodes are distinct except $x_1 = x_n$).
+        \item Let $\profile$ be a profile and $\rho$ a simple cycle in $\mathcal{M}(\profile)$. The splitting number of $\rho$, $\splitnum_\profile(\rho)$, is the smallest margin between consecutive candidates in $\rho$.
+        \item Let $\profile$ be a profile and $a, b \in X(\profile)$. The \emph{cycle number} of $a$ and $b$ in $\profile$ is
+        \[\cyclenum_\profile (a,b) = \mbox{max}(\{0\} \cup \{\splitnum(\rho)\;|\;\rho \mbox{ a simple cycle from } a \mbox{ to } a\}).\]
+        \item Let $\profile$ be a profile and $a,b \in X(\profile)$. Then $a$ \emph{defeats} $b$ in $\profile$ according to Split Cycle if $\Margin_\profile(a,b) > 0$ and 
+        \[\Margin_\profile(a,b) > \splitnum(\rho)\ \mbox{for every simple cycle}\ \rho\ \mbox{in}\ \mathcal{M}(\profile) \mbox{ containing } a \mbox{ and } b\]
+        or
+        \[\Margin_\profile(a,b) > \cyclenum_\profile (a,b).\]
+        \item A candidate $b$ is undefeated in $\profile$ if there is no candidate who defeats $b$ and for any profile $\profile$, the set of Split Cycle winners, $SC(\profile)$, is the set of candidates who are undefeated in $\profile$.
+    \end{itemize}
+\end{definition}
+
+\section{Properties}
 
 \begin{definition}
     \begin{itemize}
-        \item A \emph{profile} is a pair $(\profile, X(\profile))$ where $\profile$
+        \item A voting method $F$ is \emph{quasi-resolute} if for every uniquely-weighted $\profile \in dom(F)$, $|F (\profile)| = 1$.
+        \item Given a voting method $F$, profile $\profile$, and $a \in X(\profile)$, we say that $a$ is \emph{Condorcetian} for $F$ in $\profile$ if there is some $b \in X(\profile)$ such that $a \in F(\profile_{-b})$ and $\Margin_\profile(a, b) > 0$ (for \emph{weakly Condorcetian}, $\Margin_\profile(a, b) \geq 0$).
+    \end{itemize}
+\end{definition}
+
+\begin{definition}[Spoil and Steal]
+    \begin{itemize}
+        \item \textbf{Spoiling and stealing}:
+        \begin{enumerate}
+            \item $b$ \emph{spoils the election for} $a$ in $\profile$ if $a \in F (\profile_{-b})$, $\Margin_\profile(a, b) > 0$, $a \not \in  F (\profile)$, and $b \not \in F(\profile)$;
+            \item $b$ \emph{steals the election from} $a$ in $\profile$ if $a \in F (\profile_{-b})$, $\Margin_\profile(a, b) > 0$, $a \not \in  F (\profile)$, and $b \in F(\profile)$;
+        \end{enumerate}
+        \item \textbf{Immunity}: Let $F$ be a voting method.
+        \begin{enumerate}
+            \item $F$ satisfies \emph{immunity to spoilers} if for $\profile \in dom(F)$ and $a, b \in X(\profile)$, $b$ does not spoil the election for $a$.
+            \item $F$ satisfies \emph{immunity to stealers} if for $\profile \in dom(F)$ and $a, b \in X(\profile)$, $b$ does not steal the election from $a$.
+            \item $F$ satisfies \emph{stability for winners} if for $\profile \in dom(F)$ and $a, b \in X(\profile)$, if $a \in F (\profile_{-b})$ and $\Margin_\profile(a, b) > 0$, then $a \in F(\profile)$.
+        \end{enumerate}
+        \item \textbf{Partial immunity}: Let $F$ be a voting method. 
+        \begin{enumerate}
+            \item $F$ satisfies \emph{partial immunity to spoilers} if for all $\profile \in dom(F)$ and $a, b \in X(\profile)$, if $a$ is the unique Condorcetian candidate in $\profile$, then $b$ does not spoil the election for $a$.
+            \item $F$ satisfies \emph{partial immunity to stealers} if for all $\profile \in dom(F)$ and $a, b \in X(\profile)$, if $a$ is the unique Condorcetian candidate in $\profile$, then $b$ does not steal the election from $a$.
+            \item $F$ satisfies \emph{partial stability for winners} if for all $\profile \in dom(F)$ and $a \in X(\profile)$, if $a$ is the unique Condorcetian candidate in $\profile$, then $a \in F(\profile)$.
+            \item A voting method $F$ satisfies \emph{stability for winners with tiebreaking} if for all $\profile \in dom(F)$, if some candidate is Condorcetian for $F$ in $\profile$, then all candidates in $F (\profile)$ are Condorcetian for $F$ in $\profile$.
+        \end{enumerate}
     \end{itemize}
 \end{definition}

@@ -15,6 +15,9 @@
 
 \usepackage{tikz,pgf}
 \usetikzlibrary{arrows,positioning, graphs} % for drawing arrows in diagrams
+\tikzset{
+  candidate/.style={circle,draw=black, minimum size=.5cm,thick},
+  ->,>=stealth',shorten >=1pt,shorten <=1pt,auto,node distance=1cm,semithick}
 
 %% biblatex
 \usepackage[backend=biber,style=apa]{biblatex}
@@ -34,6 +37,8 @@
 \newcommand{\condom}{\mathcal{D}_\textit{Condorcet}}
 \newcommand{\scoringvec}{\mathbf{W}}
 \newcommand{\Margin}{\textit{Margin}}
+\newcommand{\splitnum}{\textit{Split}\#}
+\newcommand{\cyclenum}{\textit{Cycle}\#}
 
 
 
