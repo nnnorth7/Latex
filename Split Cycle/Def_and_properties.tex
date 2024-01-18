@@ -31,8 +31,8 @@ Here I'll put a collection of basic definitons and properties required in the ar
     \begin{itemize}
         \item A cycle is a \emph{simple cycle} if for all distinct $i,j \in \{1,\dots,n\}$, $x_i = x_j$ only if $i,j \in \{1,n\}$ (i.e. all nodes are distinct except $x_1 = x_n$).
         \item Let $\profile$ be a profile and $\rho$ a simple cycle in $\mathcal{M}(\profile)$. The splitting number of $\rho$, $\splitnum_\profile(\rho)$, is the smallest margin between consecutive candidates in $\rho$.
-        \item Let $\profile$ be a profile and $a, b \in X(\profile)$. The \emph{cycle number} of $a$ and $b$ in $\profile$ is
-        \[\cyclenum_\profile (a,b) = \mbox{max}(\{0\} \cup \{\splitnum(\rho)\;|\;\rho \mbox{ a simple cycle from } a \mbox{ to } a\}).\]
+        \item Let $\profile$ be a profile and $a, b \in X(\profile)$. The \emph{cycle number} of $a$ and $b$ ($\cyclenum_\profile (a,b)$) in $\profile$ is
+        \[\mbox{max}(\{0\} \cup \{\splitnum(\rho)\;|\;\rho \mbox{ a simple cycle } a \to b \to \dots \to a \}).\]
         \item Let $\profile$ be a profile and $a,b \in X(\profile)$. Then $a$ \emph{defeats} $b$ in $\profile$ according to Split Cycle if $\Margin_\profile(a,b) > 0$ and 
         \[\Margin_\profile(a,b) > \splitnum(\rho)\ \mbox{for every simple cycle}\ \rho\ \mbox{in}\ \mathcal{M}(\profile) \mbox{ containing } a \mbox{ and } b\]
         or
@@ -41,14 +41,21 @@ Here I'll put a collection of basic definitons and properties required in the ar
     \end{itemize}
 \end{definition}
 
+Discussions about \emph{functional collective choice rule} (mainly in Remark 4.25) was omitted, since I didn't understand what he actually said\dots
+
 \section{Properties}
 
 \begin{definition}
     \begin{itemize}
         \item A voting method $F$ is \emph{quasi-resolute} if for every uniquely-weighted $\profile \in dom(F)$, $|F (\profile)| = 1$.
         \item Given a voting method $F$, profile $\profile$, and $a \in X(\profile)$, we say that $a$ is \emph{Condorcetian} for $F$ in $\profile$ if there is some $b \in X(\profile)$ such that $a \in F(\profile_{-b})$ and $\Margin_\profile(a, b) > 0$ (for \emph{weakly Condorcetian}, $\Margin_\profile(a, b) \geq 0$).
+        \item A voting method $F$ satisfies \emph{expansion consistency} if for all $\profile \in dom(F)$ and nonempty $Y, Z \subseteq X(\profile)$ with $Y \cup Z = X(\profile)$, we have $F(\profile|_Y ) \cap F (\profile|_Z ) \subseteq F (\profile)$.
     \end{itemize}
 \end{definition}
+
+\begin{remark}
+    Note that expansion consistency is different from reinforcement.
+\end{remark}
 
 \begin{definition}[Spoil and Steal]
     \begin{itemize}
@@ -69,6 +76,11 @@ Here I'll put a collection of basic definitons and properties required in the ar
             \item $F$ satisfies \emph{partial immunity to stealers} if for all $\profile \in dom(F)$ and $a, b \in X(\profile)$, if $a$ is the unique Condorcetian candidate in $\profile$, then $b$ does not steal the election from $a$.
             \item $F$ satisfies \emph{partial stability for winners} if for all $\profile \in dom(F)$ and $a \in X(\profile)$, if $a$ is the unique Condorcetian candidate in $\profile$, then $a \in F(\profile)$.
             \item A voting method $F$ satisfies \emph{stability for winners with tiebreaking} if for all $\profile \in dom(F)$, if some candidate is Condorcetian for $F$ in $\profile$, then all candidates in $F (\profile)$ are Condorcetian for $F$ in $\profile$.
+        \end{enumerate}
+        \item \textbf{Strong stability for winners:}
+        \begin{enumerate}
+            \item A voting method $F$ satisfies \emph{strong stability for winners} if for all $\profile \in dom(F)$, all candidates who are weakly Condorcetian for $F$ in $\profile$ belong to $F(\profile)$.
+            \item A voting method $F$ satisfies \emph{strong stability for winners with tiebreaking} if not only does $F$ satisfy stability for winners with tiebreaking but also for all $\profile \in dom(F)$, if some candidate is weakly Condorcetian for $F$ in $\profile$ but no candidate is Condorcetian for $F$ in $\profile$, then all candidates who win in $\profile$ are weakly Condorcetian for $F$ in $\profile$.
         \end{enumerate}
     \end{itemize}
 \end{definition}
