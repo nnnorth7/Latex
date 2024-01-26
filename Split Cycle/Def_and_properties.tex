@@ -84,3 +84,23 @@ Discussions about \emph{functional collective choice rule} (mainly in Remark 4.2
         \end{enumerate}
     \end{itemize}
 \end{definition}
+~\\
+Criteria in Section 5 are not present here since it's easy to read. Instead, I will make a simple clarification of voting method mentioned in Appendix C. Notice that I will only make a one-sentence explanation for each of them.
+
+\section{Other Methods}
+
+\begin{itemize}
+    \item \emph{Ranked Pairs:} List all the edges according to margins from highest to lowest; delete all the edges in the margin graph; add the edges listed one by one; if adding a certain edge will cause a cycle, then skip the edge.
+    \item \emph{Beat Path:} (i) $a$ defeat $b$ if $\textit{Strength}(a,b) \geq \textit{Strength}(b,a)$; (ii) $x$ is a winner if nobody defeat him.
+    \item \emph{Minimax:} $x$ is Minimax winner if $x$'s largest majority loss is the smallest.
+    \item \emph{GETCHA:} (Given by Wesley.) Let $\profile$ be a profile and $S \subseteq X(\profile)$. Then $S$ is $\to_\profile$-dominant if $S \neq \emptyset$ and for all $x \in S$ and $y \in X(\profile) \backslash S$, we have $x \to y$. Define
+    \[\textit{GETCHA}(\profile) = \bigcap \{S \subseteq X(\profile)\;|\; S \mbox{ is }\to_\profile \mbox{-dominant}\}.\]
+    \item \emph{GOCHA:} (Also by Wesley.) Let $\profile$ be a profile and $S \subseteq X(\profile)$. Then $S$ is $\to_\profile$-undominated if for all $x \in S$ and $y \in X(\profile) \backslash S$, we have $y \not \to_\profile x$. Define
+    \[\textit{GOCHA}(\profile) = \bigcup\{S \subseteq X(\profile)\;|\; S \mbox{ is } \to_\profile \mbox{-undominated and no } S' \subseteq S \mbox{ is } \to_\profile \mbox{-undominated}\}\]
+    \item \emph{Uncovered Set:} Two versions from Fishburn and Gillies. We say $y$ \emph{left-covers} $x$ in $\mathcal{M}$ if for all nodes $z$ in $\mathcal{M}$, if $z \to y$, then $z \to x$.
+    \begin{align*}
+        \textit{UC}_\textit{Fish} (\profile) = &\  \{x \in X(\profile)\;|\; \mbox{there is no } y \in X(\profile):\; y \mbox{ left-covers }x \mbox{ but } x \mbox{ does not left-cover } y\}; \\
+        \textit{UC}_\textit{Gill} (\profile) = &\  \{x \in X(\profile)\;|\; \mbox{there is no } y \in X(\profile):\; y \to x \mbox{ and } y \mbox{ left-covers } x\}.
+    \end{align*}
+    \item \emph{Instant Runoff:} Remove the candidate with the least number of first-place votes, until there is a candidate with a majority of the first-place votes.
+\end{itemize}

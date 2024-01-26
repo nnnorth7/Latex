@@ -9,7 +9,7 @@
     For part (ii), we use induction on the number of $X(\profile)$ to prove it. Suppose $c$ is a Condorcet winner in $\profile$. If $|X(\profile)| = 1$, then $F(\profile) = \{c\}$. If $|X(\profile)| > 1$, assume $|X(\profile)| = n+1$ and for $|X(\profile)| \leq n$, $F$ is Condorcet consistent. Then there is some $b \in X(\profile)$ with $\Margin_\profile(c,b) > 0$ s.t. $c$ is a Condorcet winner in $\profile_{-b}$. By assumption $c \in F(\profile_{-b})$ and hence $c$ is a Condorcetian candidate. Noted that $c$ is unique. For any $a,b \in X(\profile)$ satisfying $b \neq c$ and $\Margin_\profile(b,a) > 0$, $b$ cannot be a Condorcet winner in $\profile_{-a}$ since $\Margin_\profile(c,b)>0$, which means $b \not \in F(\profile_{-a})$. Thus $F(\profile) = \{c\}$ holds and $F$ is Condorcet consistent. 
 \end{proof}
 
-Note that in the paper, Wesley defines $a$ as a Condorcet winner if `$a$ wins against every other candidate head-to-head' and there might be a misunderstanding of `wins against'. We take the definition here as a strongly Condorcet winner. which says if $a$ is a Condorcet winner, for any $b \in X(\profile)$, $\Margin(a,b) > 0$. In fact, if we use the weak form ($\Margin(a,b) \geq 0$), we may come into trouble. Consider the following case\footnote{For simplicity, we omit margins here.}:
+Note that in the paper, Wesley defines $a$ as a Condorcet winner if `$a$ wins against every other candidate head-to-head' and there might be a misunderstanding of `wins against'\footnote{Solved. Definition of Condorcet winner is given in Section 5. Doesn't he think it is a little bit weird? Yifeng Ding and I keep looking for the definition for nearly 2 minites!:$\cdot$(}. We take the definition here as a strongly Condorcet winner. which says if $a$ is a Condorcet winner, for any $b \in X(\profile)$, $\Margin(a,b) > 0$. In fact, if we use the weak form ($\Margin(a,b) \geq 0$), we may come into trouble. Consider the following case\footnote{For simplicity, we omit margins here.}:
 
 \begin{center}
     \begin{tikzpicture}
@@ -26,4 +26,4 @@ Note that in the paper, Wesley defines $a$ as a Condorcet winner if `$a$ wins ag
     \end{tikzpicture}
 \end{center}
 
-In the case above, $a$ is the Condorcet winner in $\profile$. But $a,d$ are both Condorcet winners in $\profile_{-c}$. Since $F(\profile) \subseteq \{a,c\}$, we are not sure whether $a \in F(\profile)$. Thus $a$ is not a Condorcetian candidate.
+In the case above, $a$ is the Condorcet winner in $\profile$. But $a,d$ are both Condorcet winners in $\profile_{-c}$. Since $F(\profile) \subseteq \{a,c\}$, we are not sure whether $a \in F(\profile)$. Applying such situation to another profile may cause $a$ not being a Condorcetian candidate.\footnote{But as we can see in above case, $a$ is still a Condorcetian candidate since $a \in F(\profile_{-b})$, and what Yifeng Ding want to show is $b$ is not Condorcetian (I guess), so maybe there's no such question\dots}
