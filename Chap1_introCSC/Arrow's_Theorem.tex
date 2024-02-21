@@ -78,12 +78,12 @@ We call $C$ \textit{weakly decisive} for $a$ vs. $b$, if at least $C = P(a,b)$ i
     As $C$ is decisive, we have $b \succ c$. By the completeness of $\weakor$, either $a \succ c$ or $c \succsim a$. \\
     We conseder two cases.
     \begin{itemize}
-        \item[\textit{Case 1:}] $a \succ c$: $\mathbf{P}(a,c) = C_1$. Since $f$ is IIA, for any profile $\mathbf{P'} \in \mathrm{Dom}(f)$ s.t. $\mathbf{P'}_{\upharpoonright\{a,c\}} = \mathbf{P}_{\upharpoonright\{a,c\}}$, we have $C = \mathbf{P'}(a,c)$ implies $a \succ_\mathbf{P'} c$. Thus $C$ is weakly decisive for $a \mbox{ vs.} \, b$. By \cref{Contagion}, $C$ is decisive for all pairs.
+        \item[\textit{Case 1:}] $a \succ c$: $\mathbf{P}(a,c) = C_1$. Since $f$ is IIA, for any profile $\mathbf{P'} \in \mathrm{Dom}(f)$ s.t. $\mathbf{P'}_{\upharpoonright\{a,c\}} = \mathbf{P}_{\upharpoonright\{a,c\}}$, we have $C_1 = \mathbf{P'}(a,c)$ implies $a \succ_\mathbf{P'} c$. Thus $C_1$ is weakly decisive for $a \mbox{ vs.} \, c$. By \cref{Contagion}, $C_1$ is decisive for all pairs.
         \item[\textit{Case 2:}] $c \succsim a$: By transitivity of $\weakor$, $b \succ a$. With $\mathbf{P}(b,a) = C_2$, analogously we can conclude that $C_2$ is weakly decisive for $b \mbox{ vs.} \, a$, thus decisive for all pairs.
     \end{itemize}
 \end{proof}
 
-\section{Another Version of Proof}
+\section{Another Proof}
 
 In this part, I will give another version of Arrow's Theorem, which is mentioned by Eric Pacuit. The main difference between the two versions is the part after \cref{Contagion}.
 
@@ -123,11 +123,12 @@ Now we prove the following:
 \begin{proof}
     Suppose (towards a contradiction) that there is a $i \in C^\ast$ and $\mathbf{P} \in \mathrm{Dom}(f)$ s.t. $a \succ_i b$ and $b \succ a$.\\
     Since $C^\ast$ is decisive, there must be some $C' \subsetneq C^\ast$ s.t. $C' \neq \emptyset$, $i \not \in C'$ and $b \succsim_j a$ for all $j \in C'$. W.l.o.g. let $C' = C^\ast \backslash \{i\}$. Now we show that $C'$ is decisive for $c \mbox{ vs.}\, a$, then $C' \in \mathcal{D}$, contradict with $C^\ast$ is the minimal element by \cref{minimal}.\\
-    To show that $C'$ is decisive for $c \mbox{ vs.}\, a$, let $\mathbf{P''} \in \mathrm{Dom}(f)$ be an arbitrary profile with $C' \subseteq \profile''(c,a)$. Consider a profile $\mathbf{P'} \in \mathrm{Dom}(f)$ s.t. $\profile'_{\upharpoonright \{a,b\}} = \profile_{\upharpoonright \{a,b\}}$ and $\profile''_{\upharpoonright \{a,c\}} = \profile'_{\upharpoonright \{a,c\}}$. Furthermore, the remaining rankings of $a,b,c$ is:
-    \begin{itemize}
-        \item $a \succ_i b$ and $c \succ_i b$ for $i$;
-        \item $c \succ_j a$ and $c \succ_j b$ for all $j \in C'$.
-    \end{itemize}
+    To show that $C'$ is decisive for $c \mbox{ vs.}\, a$, let $\mathbf{P''} \in \mathrm{Dom}(f)$ be an arbitrary profile with $C' \subseteq \profile''(c,a)$. Consider a profile $\mathbf{P'} \in \mathrm{Dom}(f)$ s.t. $\profile'_{\upharpoonright \{a,b\}} = \profile_{\upharpoonright \{a,b\}}$ and $\profile''_{\upharpoonright \{a,c\}} = \profile'_{\upharpoonright \{a,c\}}$. Furthermore, the remaining rankings of $a,b,c$ in profile $\profile'$ is:
+    \begin{enumerate}
+        \item $c \succ'_i b$ for all $j\in C^*$ (because we intend to have $c \succ' b$)
+        \item $a \succ'_i b$ for $i$, because $\profile'_{\upharpoonright \{a,b\}} = \profile_{\upharpoonright \{a,b\}}$ and $a \succ_i b$
+        \item $c \succ'_j a$  for all $j \in C'$, because $\profile''_{\upharpoonright \{a,c\}} = \profile'_{\upharpoonright \{a,c\}}$ and $C'\subseteq \profile''(c,a)$
+    \end{enumerate}
     Since $C^\ast = C' \cup \{i\}$ is decisive and $C^\ast \subseteq \profile'(c,b)$, $c \succ' b$ holds. Moreover, from $\profile'_{\upharpoonright \{a,b\}} = \profile_{\upharpoonright \{a,b\}}$ and $b \succ a$, we can conclude that $b \succ' a$ by IIA. Thus $c \succ' a$.\\
     Since $\profile''_{\upharpoonright \{a,c\}} = \profile'_{\upharpoonright \{a,c\}}$, by IIA, $c \succ'' a$. Thus $C'$ is decisive.
 \end{proof}
@@ -153,4 +154,32 @@ Now we prove Arrow's Theorem.
     Suppose (towards a contradiction) that $|C| > 1$. Then we can make a partition of $C$, i.e. $C = C_1 \cup C_2$ and $C_1 \cap C_2 = \emptyset$ where $C_1,C_2$ is nonempty set.\\
     Consider a profile $\profile$ in which $a \succ_i b \succ_i c$ for all $i \in C_1$ and $b \succ_j c \succ_j a$ for all $j \in C_2$. Then not $b \succ a$ and not $a \succ c$, which is $a \succsim b$ and $c \succsim a$. By transitivity, $c \succsim b$. However, $C$ is decisive and $C \subseteq \profile(b,c)$, which leads us to the conclusion that $b \succ c$, contradict.\\
     Thus $|C| = 1$, $f$ is a dictatorship.
+\end{proof}
+
+\section{Arrow's Theorem and Ultrafilters}
+
+Interestingly, the set-theoretic notion of ultrafilters also has somehow unexpected applications in the theory of social choice. For example, in the proof of Arrow's theorem and Gibbard-Satterthwaite theorem etc. The following links may be helpful:
+\begin{itemize}
+    \item \href{https://math.stackexchange.com/questions/585110/arrows-impossibility-theorem-and-ultrafilters-references}{Collection of some proofs}
+    \item Two blogs on Arrow's theorem and Gibbard-Satterthwaite theorem separately:
+    \begin{itemize}
+        \item \href{https://algorithmicallyincompressible.wordpress.com/2009/08/11/ultrafilters-and-social-choice/#more-95}{Blog I: Arrow}
+        \item \href{https://algorithmicallyincompressible.wordpress.com/2009/11/05/ultrafilters-and-social-choice-ii/}{Blog II: GS theorem}
+    \end{itemize}
+    \item 
+\end{itemize}
+In the following, we show that in a \emph{finite} society, the family of decisive sets form a filter and morever an \textcolor{Maroon}{ultrafilter} actually.
+
+Still, let the finite set of individuals be $N$ and the set of alternatives/candidates be $A$, and $\mathcal{D}=\{C\mid C \text{ is decisive}\}$. 
+
+\begin{lemma} The family of decisive sets of $N$ forms a filter.
+    \begin{enumerate}
+        \item $\emptyset \notin \mathcal{D}$
+        \item $N \in \mathcal{D}$
+        \item $\mathcal{D}$ is closed under supersets
+        \item $\mathcal{D}$ is closed under intersection
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    
 \end{proof}
